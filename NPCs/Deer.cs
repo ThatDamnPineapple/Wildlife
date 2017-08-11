@@ -39,7 +39,7 @@ namespace Wildlife.NPCs
 
 				public override float SpawnChance(NPCSpawnInfo spawnInfo)
         {
-            return spawnInfo.spawnTileY < Main.rockLayer && Main.dayTime && !spawnInfo.invasion && !spawnInfo.sky && !Main.eclipse && !spawnInfo.player.ZoneDesert && !spawnInfo.player.ZoneJungle ? 0.08f : 0f;
+            return spawnInfo.spawnTileY < Main.rockLayer && Main.dayTime && !spawnInfo.invasion && !spawnInfo.sky && !Main.eclipse && !spawnInfo.player.ZoneDesert && !spawnInfo.player.ZoneJungle ? 0.06f : 0f;
         }
 		
         public override void FindFrame(int frameHeight)

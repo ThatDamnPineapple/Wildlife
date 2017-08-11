@@ -88,6 +88,15 @@ namespace Wildlife
             recipe5.AddTile(TileID.Bottles);
             recipe5.SetResult(291);
             recipe5.AddRecipe();
+			
+			ModRecipe recipe5 = new ModRecipe(this); //ObsSkin
+			recipe5.AddIngredient(ItemID.BottledWater, 1);
+            recipe5.AddIngredient(null, "MagmaCorn", 1);
+			recipe5.AddIngredient(173, 1);
+			recipe5.AddIngredient(317, 1);
+            recipe5.AddTile(TileID.Bottles);
+            recipe5.SetResult(288);
+            recipe5.AddRecipe();
         }
 	}
 }
