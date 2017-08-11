@@ -71,10 +71,37 @@ namespace Wildlife.Tiles
 			
 			 if(TileArray2.Contains(Framing.GetTileSafely(i,j-1).type) &&TileArray2.Contains(Framing.GetTileSafely(i,j-2).type) && place)
             {
-                        if(Main.rand.Next(11)==1)
+                        if(Main.rand.Next(30) ==1)
                         {
                             WorldGen.PlaceObject(i-1,j-1,mod.TileType("CatTail"));
                             NetMessage.SendObjectPlacment(-1,i-1,j-1,mod.TileType("CatTail"),0,0,-1,-1);
+						
+							
+                        }            
+                
+            }
+			}
+			
+			if (type == 1) //magma corn
+			{
+				bool place = false;
+				for (int x = i - 7; x < i + 7; x++)
+				{
+					for (int y = j; y < j + 7; y++)
+					{
+						if (Main.tile[x, y].liquid == 255 && Main.tile[x, y].lava())
+						{
+							place = true;
+						}
+					}
+				}
+			
+			 if(TileArray2.Contains(Framing.GetTileSafely(i,j-1).type) &&TileArray2.Contains(Framing.GetTileSafely(i,j-2).type) && place)
+            {
+                        if(Main.rand.Next(11)==1)
+                        {
+                            WorldGen.PlaceObject(i-1,j-1,mod.TileType("MagmaCorn"));
+                            NetMessage.SendObjectPlacment(-1,i-1,j-1,mod.TileType("MagmaCorn"),0,0,-1,-1);
 						
 							
                         }            
@@ -117,7 +144,7 @@ namespace Wildlife.Tiles
 			{
             if(TileArray2.Contains(Framing.GetTileSafely(i,j-1).type) &&TileArray2.Contains(Framing.GetTileSafely(i,j-2).type))
             {
-                        if(Main.rand.Next(7)==0)
+                        if(Main.rand.Next(25)==0)
                         {
                             WorldGen.PlaceObject(i-1,j-1,mod.TileType("Gelon"));
                             NetMessage.SendObjectPlacment(-1,i-1,j-1,mod.TileType("Gelon"),0,0,-1,-1);

@@ -1,4 +1,4 @@
-Wildlife Mod adds new passive animals and plants to add that extra touch of atmosphere to your terraria world. Note that is this an early WIP, and will have a lot more content in the future. Animals include:
+Wildlife Mod adds new passive animals and plants to add that extra touch of atmosphere to your terraria world. You can make new potions and get other goodies from the content. Animals include:
 
 Deer
 Monkey
@@ -19,5 +19,6 @@ Gelon
 Cattails
 Strawberries
 Frost Shine
+Magma Corn
 
 

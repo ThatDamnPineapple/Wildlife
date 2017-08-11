@@ -40,8 +40,11 @@ namespace Wildlife.Tiles
         }
        public override void KillMultiTile(int i, int j, int frameX, int frameY)
         {
-            
-                Item.NewItem(i * 16, j * 16, 48, 48, mod.ItemType("Bamboo"));
+            int drop = Main.rand.Next(2,5);
+			for (int k = 0; k < drop; k++)
+			{
+                Item.NewItem((i * 16) + Main.rand.Next(24), (j * 16) + Main.rand.Next(64), 48, 48, mod.ItemType("Bamboo"));
+			}
            
         }
        

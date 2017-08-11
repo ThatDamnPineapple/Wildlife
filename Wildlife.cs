@@ -56,6 +56,38 @@ namespace Wildlife
             recipe5.AddTile(TileID.Bottles);
             recipe5.SetResult(304);
             recipe5.AddRecipe();
+			
+			ModRecipe recipe5 = new ModRecipe(this); //hunting
+			recipe5.AddIngredient(ItemID.BottledWater, 1);
+            recipe5.AddIngredient(null, "Jaderose", 1);
+			recipe5.AddIngredient(315, 1);
+            recipe5.AddTile(TileID.Bottles);
+            recipe5.SetResult(304);
+            recipe5.AddRecipe();
+			
+			ModRecipe recipe5 = new ModRecipe(this); //warmth
+			recipe5.AddIngredient(ItemID.BottledWater, 1);
+            recipe5.AddIngredient(null, "FrostShine", 1);
+			recipe5.AddIngredient(2358, 1);
+            recipe5.AddTile(TileID.Bottles);
+            recipe5.SetResult(3359);
+            recipe5.AddRecipe();
+			
+			ModRecipe recipe5 = new ModRecipe(this); //gills
+			recipe5.AddIngredient(ItemID.BottledWater, 1);
+            recipe5.AddIngredient(null, "FrostShine", 1);
+			recipe5.AddIngredient(null, "CatTail", 1);
+            recipe5.AddTile(TileID.Bottles);
+            recipe5.SetResult(291);
+            recipe5.AddRecipe();
+			
+			ModRecipe recipe5 = new ModRecipe(this); //gills
+			recipe5.AddIngredient(ItemID.BottledWater, 1);
+            recipe5.AddIngredient(null, "Bamboo", 1);
+			recipe5.AddIngredient(null, "Jaderose", 1);
+            recipe5.AddTile(TileID.Bottles);
+            recipe5.SetResult(291);
+            recipe5.AddRecipe();
         }
 	}
 }

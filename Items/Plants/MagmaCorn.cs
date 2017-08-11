@@ -8,11 +8,11 @@ using System.Collections.Generic;
 
 namespace Wildlife.Items.Plants
 {
-	public class Bamboo : ModItem
+	public class MagmaCorn : ModItem
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Bamboo");
+			DisplayName.SetDefault("Magma Corn");
             
 
         }
@@ -27,8 +27,8 @@ namespace Wildlife.Items.Plants
 			item.useTime = 10;
 			item.useStyle = 1;
 			item.consumable = true;
-			item.value = 500;
-			//item.createTile = mod.TileType("Bamboo");
+			item.value = 5000;
+			item.createTile = mod.TileType("MagmaCorn");
 		}
 		
         

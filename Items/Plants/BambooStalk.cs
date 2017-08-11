@@ -8,11 +8,11 @@ using System.Collections.Generic;
 
 namespace Wildlife.Items.Plants
 {
-	public class Bamboo : ModItem
+	public class BambooStalk : ModItem
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Bamboo");
+			DisplayName.SetDefault("Bamboo Stalk");
             
 
         }
@@ -28,9 +28,16 @@ namespace Wildlife.Items.Plants
 			item.useStyle = 1;
 			item.consumable = true;
 			item.value = 500;
-			//item.createTile = mod.TileType("Bamboo");
+			item.createTile = mod.TileType("Bamboo");
 		}
 		
-        
+        public override void AddRecipes()
+        {
+            ModRecipe recipe = new ModRecipe(mod);
+            recipe.AddIngredient(null, "Bamboo", 5);
+            recipe.AddTile(18);
+            recipe.SetResult(this);
+            recipe.AddRecipe();
+        }
 	}
 }
