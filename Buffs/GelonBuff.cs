@@ -11,7 +11,7 @@ namespace Wildlife.Buffs
     {
         public override void SetDefaults()
         {
-             DisplayName.SetDefault("Gelon");
+             DisplayName.SetDefault("Gelatinous");
             Description.SetDefault("Increased minion slots by 1");
        
             Main.pvpBuff[Type] = true;
