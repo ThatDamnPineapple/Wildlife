@@ -12,7 +12,7 @@ namespace Wildlife.Items.Plants
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Magma Cob \n'Too hot to eat!'");
+			DisplayName.SetDefault("Magma Corncob \n'Too hot to eat!'");
             
 
         }
