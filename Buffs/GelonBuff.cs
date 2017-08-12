@@ -12,7 +12,7 @@ namespace Wildlife.Buffs
         public override void SetDefaults()
         {
              DisplayName.SetDefault("Gelon");
-            Description.SetDefault("Increases minion slots by 1");
+            Description.SetDefault("Increased minion slots by 1");
        
             Main.pvpBuff[Type] = true;
             Main.buffNoTimeDisplay[Type] = false;
