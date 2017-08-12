@@ -45,9 +45,9 @@ namespace Wildlife.Items.Plants
         public override bool UseItem(Player player)
         {
             player.AddBuff(BuffID.PotionSickness, 3600);
-			if (Main.rand.Next(5) == 0)
+			if (Main.rand.Next(3) == 0)
 			{
-            player.AddBuff(156, 300);
+            player.AddBuff(156, 450);
 			}
             
             return true;
