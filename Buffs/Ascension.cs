@@ -12,7 +12,7 @@ namespace Wildlife.Buffs
         public override void SetDefaults()
         {
              DisplayName.SetDefault("Ascension");
-            Description.SetDefault("Increased Wing Time");
+            Description.SetDefault("Increased Wing Flight Time");
        
             Main.pvpBuff[Type] = true;
             Main.buffNoTimeDisplay[Type] = false;
