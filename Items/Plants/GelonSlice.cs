@@ -24,7 +24,7 @@ namespace Wildlife.Items.Plants
             item.maxStack = 30;
             item.consumable = true;
             item.width = 12;
-            item.height = 30;
+            item.height = 99;
           
             item.value = 5500;
             item.rare = 1;
