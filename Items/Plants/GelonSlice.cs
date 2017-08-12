@@ -28,7 +28,7 @@ namespace Wildlife.Items.Plants
           
             item.value = 5500;
             item.rare = 1;
-            item.buffType = mod.BuffType("PrismaticPotion");
+            item.buffType = item.BuffType("137");
             item.buffTime = 5000;
            // return;
 	}
