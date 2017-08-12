@@ -39,7 +39,7 @@ namespace Wildlife.Items.Drops
         {
             ModRecipe recipe = new ModRecipe(mod);
             recipe.AddIngredient(null, "Bamboo", 1);
-                      recipe.AddTile(TileID.Workbenches);
+                      recipe.AddTile(18);
             recipe.SetResult(this, 30);
             recipe.AddRecipe();
         }
