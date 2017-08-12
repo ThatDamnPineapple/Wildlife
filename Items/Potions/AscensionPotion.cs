@@ -42,7 +42,7 @@ namespace Wildlife.Items.Potions
             ModRecipe recipe = new ModRecipe(mod);
 			recipe.AddIngredient(ItemID.BottledWater, 1);
 			recipe.AddIngredient(ItemID.SoulofFlight, 2);
-            recipe.AddIngredient(null, "FrostShine", 1);
+			recipe.AddIngredient(ItemID.Shiverthorn, 1);
 			recipe.AddIngredient(null, "Shiverthorn", 1);
             recipe.AddTile(TileID.Bottles);
             recipe.SetResult(this);
