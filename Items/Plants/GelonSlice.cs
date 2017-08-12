@@ -28,7 +28,7 @@ namespace Wildlife.Items.Plants
           
             item.value = 5500;
             item.rare = 1;
-            item.buffType = item.BuffType("137");
+            item.buffType = mod.BuffType("GelonBuff");
             item.buffTime = 5000;
            // return;
 	}
