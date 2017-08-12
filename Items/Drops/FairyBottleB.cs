@@ -13,33 +13,30 @@ namespace Wildlife.Items.Drops
 		public override void SetStaticDefaults()
 		{
 			DisplayName.SetDefault("Bottled Fairy");
-           // Tooltip.SetDefault("Restores 160 mana");
+           Tooltip.SetDefault("Gives 10% reduced mana cost");
 
         }
-		public override void SetDefaults()
-		{
-			item.UseSound = SoundID.Item3;
+		 public override void SetDefaults()
+        {
+         
+            item.UseSound = SoundID.Item3;
             item.useStyle = 2;
             item.useTurn = true;
-            item.useAnimation = 20;
-            item.useTime = 20;
+            item.useAnimation = 17;
+            item.useTime = 17;
             item.maxStack = 30;
-			//item.potion = true;
-			item.healMana = 160;
             item.consumable = true;
-            item.value = 3500;
+            item.width = 12;
+            item.height = 30;
+          
+            item.value = 2500;
             item.rare = 5;
-            return;
-		}
-		
-        public override bool UseItem(Player player)
-        {
-        //    player.statMana += 160;
-			player.AddBuff(BuffID.ManaSickness, 2000);
-			
-            
-            return true;
+            item.buffType = mod.BuffType("BlueFairyBuff");
+            item.buffTime = 15000;
+           // return;
         }
+		
+       
 		public override void AddRecipes()
         {
             ModRecipe recipe = new ModRecipe(mod);
