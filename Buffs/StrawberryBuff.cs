@@ -11,8 +11,8 @@ namespace Wildlife.Buffs
     {
         public override void SetDefaults()
         {
-             DisplayName.SetDefault("Strawberry");
-            Description.SetDefault("Increases minion slots by 1");
+             DisplayName.SetDefault("Sweet Adrenaline");
+            Description.SetDefault("Increasess movement speed");
        
             Main.pvpBuff[Type] = true;
             Main.buffNoTimeDisplay[Type] = false;
