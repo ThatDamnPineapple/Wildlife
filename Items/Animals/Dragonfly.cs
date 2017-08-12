@@ -27,6 +27,7 @@ namespace Wildlife.Items.Animals
 			item.noMelee = true;
 			item.useTime = 10;
 			item.useStyle = 1;
+			item.bait = 25;
 			item.consumable = true;
 		}
 		  public override bool UseItem(Player player)

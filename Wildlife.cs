@@ -57,46 +57,46 @@ namespace Wildlife
             recipe5.SetResult(304);
             recipe5.AddRecipe();
 			
-			ModRecipe recipe5 = new ModRecipe(this); //hunting
-			recipe5.AddIngredient(ItemID.BottledWater, 1);
-            recipe5.AddIngredient(null, "Jaderose", 1);
-			recipe5.AddIngredient(315, 1);
-            recipe5.AddTile(TileID.Bottles);
-            recipe5.SetResult(304);
-            recipe5.AddRecipe();
+			ModRecipe recipe6 = new ModRecipe(this); //hunting
+			recipe6.AddIngredient(ItemID.BottledWater, 1);
+            recipe6.AddIngredient(null, "Jaderose", 1);
+			recipe6.AddIngredient(315, 1);
+            recipe6.AddTile(TileID.Bottles);
+            recipe6.SetResult(304);
+            recipe6.AddRecipe();
 			
-			ModRecipe recipe5 = new ModRecipe(this); //warmth
-			recipe5.AddIngredient(ItemID.BottledWater, 1);
-            recipe5.AddIngredient(null, "FrostShine", 1);
-			recipe5.AddIngredient(2358, 1);
-            recipe5.AddTile(TileID.Bottles);
-            recipe5.SetResult(3359);
-            recipe5.AddRecipe();
+			ModRecipe recipe7 = new ModRecipe(this); //warmth
+			recipe7.AddIngredient(ItemID.BottledWater, 1);
+            recipe7.AddIngredient(null, "FrostShine", 1);
+			recipe7.AddIngredient(2358, 1);
+            recipe7.AddTile(TileID.Bottles);
+            recipe7.SetResult(2359);
+            recipe7.AddRecipe();
 			
-			ModRecipe recipe5 = new ModRecipe(this); //gills
-			recipe5.AddIngredient(ItemID.BottledWater, 1);
-            recipe5.AddIngredient(null, "FrostShine", 1);
-			recipe5.AddIngredient(null, "CatTail", 1);
-            recipe5.AddTile(TileID.Bottles);
-            recipe5.SetResult(291);
-            recipe5.AddRecipe();
+			ModRecipe recipe8 = new ModRecipe(this); //gills
+			recipe8.AddIngredient(ItemID.BottledWater, 1);
+            recipe8.AddIngredient(null, "FrostShine", 1);
+			recipe8.AddIngredient(null, "CatTail", 1);
+            recipe8.AddTile(TileID.Bottles);
+            recipe8.SetResult(291);
+            recipe8.AddRecipe();
 			
-			ModRecipe recipe5 = new ModRecipe(this); //gills
-			recipe5.AddIngredient(ItemID.BottledWater, 1);
-            recipe5.AddIngredient(null, "Bamboo", 1);
-			recipe5.AddIngredient(null, "Jaderose", 1);
-            recipe5.AddTile(TileID.Bottles);
-            recipe5.SetResult(291);
-            recipe5.AddRecipe();
+			ModRecipe recipe9 = new ModRecipe(this); //gills
+			recipe9.AddIngredient(ItemID.BottledWater, 1);
+            recipe9.AddIngredient(null, "Bamboo", 1);
+			recipe9.AddIngredient(null, "Jaderose", 1);
+            recipe9.AddTile(TileID.Bottles);
+            recipe9.SetResult(291);
+            recipe9.AddRecipe();
 			
-			ModRecipe recipe5 = new ModRecipe(this); //ObsSkin
-			recipe5.AddIngredient(ItemID.BottledWater, 1);
-            recipe5.AddIngredient(null, "MagmaCorn", 1);
-			recipe5.AddIngredient(173, 1);
-			recipe5.AddIngredient(317, 1);
-            recipe5.AddTile(TileID.Bottles);
-            recipe5.SetResult(288);
-            recipe5.AddRecipe();
+			ModRecipe recipe10 = new ModRecipe(this); //ObsSkin
+			recipe10.AddIngredient(ItemID.BottledWater, 1);
+            recipe10.AddIngredient(null, "MagmaCorn", 1);
+			recipe10.AddIngredient(173, 1);
+			recipe10.AddIngredient(317, 1);
+            recipe10.AddTile(TileID.Bottles);
+            recipe10.SetResult(288);
+            recipe10.AddRecipe();
         }
 	}
 }
