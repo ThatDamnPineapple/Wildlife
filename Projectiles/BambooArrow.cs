@@ -12,7 +12,7 @@ namespace Wildlife.Projectiles
 	{
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Beetle Arrow");
+            DisplayName.SetDefault("Bamboo Arrow");
         }
         public override void SetDefaults()
 		{
