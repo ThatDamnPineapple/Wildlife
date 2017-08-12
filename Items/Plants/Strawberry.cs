@@ -28,7 +28,7 @@ namespace Wildlife.Items.Plants
           
             item.value = 2500;
             item.rare = 0;
-            item.buffType = item.BuffType("26");
+            item.buffType = mod.BuffType("StrawberryBuff");
             item.buffTime = 5000;
            // return;
 	}
