@@ -20,7 +20,7 @@ namespace Wildlife.Buffs
 
         public override void Update(Player player, ref int buffIndex)
         {
-            player.wingTime += 40f;
+            player.wingTime += 5f;
 			
         }
     }
