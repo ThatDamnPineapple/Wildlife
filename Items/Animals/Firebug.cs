@@ -12,7 +12,7 @@ namespace Wildlife.Items.Animals
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Infernal Spacefly");
+			DisplayName.SetDefault("Fire Bug");
             
 
         }
@@ -22,6 +22,7 @@ namespace Wildlife.Items.Animals
 			item.height = 22;
 			item.maxStack = 99;
 			item.useTurn = true;
+			item.rare = 5;
 			item.autoReuse = false;
 			item.useAnimation = 15;
 			item.noMelee = true;

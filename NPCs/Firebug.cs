@@ -11,7 +11,7 @@ namespace Wildlife.NPCs
     {
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Infernal Spacefly");
+            DisplayName.SetDefault("Fire Bug");
 			Main.npcFrameCount[npc.type] = 3;
         }
         public override void SetDefaults()
@@ -31,12 +31,13 @@ namespace Wildlife.NPCs
 				aiType = 358;
 				npc.noGravity = true;
             npc.knockBackResist = .50f;
+			 npc.lavaImmune = true;
   
         }
 
-				public override float SpawnChance(NPCSpawnInfo spawnInfo)
+		 public override float SpawnChance(NPCSpawnInfo spawnInfo)
         {
-            return !spawnInfo.invasion && !spawnInfo.sky && !Main.eclipse && spawnInfo.player.ZoneMeteor ? 0.2f : 0f;
+            return spawnInfo.player.ZoneUnderworldHeight ? 0.2f : 0f;
         }
 		public override void FindFrame(int frameHeight)
         {
