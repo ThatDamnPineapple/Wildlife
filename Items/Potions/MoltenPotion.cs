@@ -41,6 +41,7 @@ namespace Wildlife.Items.Potions
         {
             ModRecipe recipe = new ModRecipe(mod);
 			recipe.AddIngredient(ItemID.BottledWater, 1);
+            recipe.AddIngredient(null, "Firebug", 1);
             recipe.AddIngredient(null, "MagmaCorn", 1);
 			recipe.AddIngredient(318, 1);
             recipe.AddTile(TileID.Bottles);
