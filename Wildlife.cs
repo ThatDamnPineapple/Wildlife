@@ -49,13 +49,13 @@ namespace Wildlife
             recipe4.SetResult(303);
             recipe4.AddRecipe();
 			
-			ModRecipe recipe5 = new ModRecipe(this); //hunting
-			recipe5.AddIngredient(ItemID.BottledWater, 1);
-            recipe5.AddIngredient(null, "Jaderose", 1);
-			recipe5.AddIngredient(315, 1);
+			ModRecipe recipe5 = new ModRecipe(this); //Lesser Healing
+			recipe5.AddIngredient(ItemID.BottledWater, 2);
+            recipe5.AddIngredient(null, "Strawberry", 15);
+			recipe5.AddIngredient(313, 1);
             recipe5.AddTile(TileID.Bottles);
             recipe5.SetResult(304);
-            recipe5.AddRecipe();
+            recipe5.AddRecipe(2);
 			
 			ModRecipe recipe6 = new ModRecipe(this); //hunting
 			recipe6.AddIngredient(ItemID.BottledWater, 1);
