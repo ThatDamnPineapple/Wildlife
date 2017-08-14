@@ -51,7 +51,7 @@ namespace Wildlife
 			
 			ModRecipe recipe5 = new ModRecipe(this); //Lesser Healing
 			recipe5.AddIngredient(ItemID.BottledWater, 2);
-            recipe5.AddIngredient(null, "Strawberry", 15);
+            recipe5.AddIngredient(null, "Strawberry", 5);
 			recipe5.AddIngredient(313, 1);
             recipe5.AddTile(TileID.Bottles);
             recipe5.SetResult(304);
@@ -97,6 +97,16 @@ namespace Wildlife
             recipe10.AddTile(TileID.Bottles);
             recipe10.SetResult(288);
             recipe10.AddRecipe();
+	    
+			ModRecipe recipe11 = new ModRecipe(this); //Inferno
+			recipe11.AddIngredient(ItemID.BottledWater, 1);
+			recipe11.AddIngredient(502, 8);
+			recipe11.AddIngredient(174, 3);
+            recipe11.AddIngredient(null, "MagmaCorn", 1);
+			recipe11.AddIngredient(317, 1);
+            recipe11.AddTile(TileID.Bottles);
+            recipe11.SetResult(2348);
+            recipe11.AddRecipe();
         }
 	}
 }
