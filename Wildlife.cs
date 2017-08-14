@@ -55,7 +55,7 @@ namespace Wildlife
 			recipe5.AddIngredient(313, 1);
             recipe5.AddTile(TileID.Bottles);
             recipe5.SetResult(304);
-            recipe5.AddRecipe(1);
+            recipe5.AddRecipe();
 			
 			ModRecipe recipe6 = new ModRecipe(this); //hunting
 			recipe6.AddIngredient(ItemID.BottledWater, 1);
