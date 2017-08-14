@@ -12,7 +12,7 @@ namespace Wildlife.Items.Animals
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Infernal Spacebug");
+			DisplayName.SetDefault("Infernal Spacefly");
             
 
         }
