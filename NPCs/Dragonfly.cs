@@ -11,7 +11,7 @@ namespace Wildlife.NPCs
     {
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Dragon Fly");
+            DisplayName.SetDefault("Dragonfly");
 			Main.npcFrameCount[npc.type] = 3;
         }
         public override void SetDefaults()
