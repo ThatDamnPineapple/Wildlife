@@ -13,7 +13,7 @@ namespace Wildlife.Items.Drops
 		public override void SetStaticDefaults()
 		{
 			DisplayName.SetDefault("Bottled Fairy");
-          //  Tooltip.SetDefault("Restores 160 life");
+            //Tooltip.SetDefault("Restores 160 life");
 
         }
 		public override void SetDefaults()

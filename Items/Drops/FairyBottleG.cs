@@ -13,7 +13,7 @@ namespace Wildlife.Items.Drops
 		public override void SetStaticDefaults()
 		{
 			DisplayName.SetDefault("Bottled Fairy");
-           Tooltip.SetDefault("Gives 5% extra damage");
+           Tooltip.SetDefault("Increases damage by 5%");
 
         }
 		 public override void SetDefaults()

@@ -12,7 +12,7 @@ namespace Wildlife.Buffs
         public override void SetDefaults()
         {
              DisplayName.SetDefault("Prismatic Mana");
-            Description.SetDefault("You have 40 extra mana.");
+            Description.SetDefault("Maximum mana increased");
        
             Main.pvpBuff[Type] = true;
             Main.buffNoTimeDisplay[Type] = false;

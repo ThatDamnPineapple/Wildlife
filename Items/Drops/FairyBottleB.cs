@@ -13,7 +13,7 @@ namespace Wildlife.Items.Drops
 		public override void SetStaticDefaults()
 		{
 			DisplayName.SetDefault("Bottled Fairy");
-           Tooltip.SetDefault("Gives 10% reduced mana cost");
+           Tooltip.SetDefault("Mana usage decreased by 10%");
 
         }
 		 public override void SetDefaults()

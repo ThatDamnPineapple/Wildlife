@@ -13,7 +13,7 @@ namespace Wildlife.Items.Potions
 		public override void SetStaticDefaults()
 		{
 			DisplayName.SetDefault("Prismatic Potion");
-           Tooltip.SetDefault("Gives 40 extra mana");
+           Tooltip.SetDefault("Increases maximum mana by 40");
 
         }
 		 public override void SetDefaults()

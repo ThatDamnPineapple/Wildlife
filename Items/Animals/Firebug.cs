@@ -23,7 +23,7 @@ namespace Wildlife.Items.Animals
 			item.maxStack = 99;
 			item.useTurn = true;
 			item.rare = 5;
-			item.autoReuse = false;
+			item.autoReuse = true;
 			item.useAnimation = 15;
 			item.noMelee = true;
 			item.useTime = 10;

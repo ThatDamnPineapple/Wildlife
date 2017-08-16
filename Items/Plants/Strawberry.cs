@@ -11,7 +11,7 @@ namespace Wildlife.Items.Plants
 		public override void SetStaticDefaults()
 		{
 			DisplayName.SetDefault("Strawberry");
-           Tooltip.SetDefault("'Simply Delicious'");
+           Tooltip.SetDefault("Increases movement speed\n'Simply Delicious'");
         }
 		 public override void SetDefaults()
         {

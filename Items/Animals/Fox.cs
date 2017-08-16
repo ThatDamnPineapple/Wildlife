@@ -22,7 +22,7 @@ namespace Wildlife.Items.Animals
 			item.height = 22;
 			item.maxStack = 99;
 			item.useTurn = true;
-			item.autoReuse = false;
+			item.autoReuse = true;
 			item.useAnimation = 15;
 			item.noMelee = true;
 			item.useTime = 10;

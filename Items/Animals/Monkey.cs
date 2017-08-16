@@ -13,7 +13,7 @@ namespace Wildlife.Items.Animals
 		public override void SetStaticDefaults()
 		{
 			DisplayName.SetDefault("Monkey");
-            
+            Tooltip.SetDefault("No monkey buisiness going on here");
 
         }
 		public override void SetDefaults()
@@ -22,7 +22,7 @@ namespace Wildlife.Items.Animals
 			item.height = 22;
 			item.maxStack = 99;
 			item.useTurn = true;
-			item.autoReuse = false;
+			item.autoReuse = true;
 			item.useAnimation = 15;
 			item.noMelee = true;
 			item.useTime = 10;

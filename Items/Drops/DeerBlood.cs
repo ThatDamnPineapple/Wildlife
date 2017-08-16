@@ -13,7 +13,7 @@ namespace Wildlife.Items.Drops
 		public override void SetStaticDefaults()
 		{
 			DisplayName.SetDefault("Deer Blood");
-            Tooltip.SetDefault("'You are horrible'");
+            Tooltip.SetDefault("Increases damage by 5%\n'You are horrible'");
 
         }
         public override void SetDefaults()

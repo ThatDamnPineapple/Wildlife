@@ -13,7 +13,7 @@ namespace Wildlife.Items.Potions
 		public override void SetStaticDefaults()
 		{
 			DisplayName.SetDefault("Bounce Potion");
-           Tooltip.SetDefault("You don't take fall damage");
+           Tooltip.SetDefault("Grants immunity to fall damage");
 
         }
 		 public override void SetDefaults()

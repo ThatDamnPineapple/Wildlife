@@ -11,7 +11,7 @@ namespace Wildlife.Items.Plants
 		public override void SetStaticDefaults()
 		{
 			DisplayName.SetDefault("Gelon Slice");
-           Tooltip.SetDefault("'Sweet 'n' slimy'");
+           Tooltip.SetDefault("Increases your max number of minions\n'Sweet 'n' slimy'");
         }
 		 public override void SetDefaults()
         {
