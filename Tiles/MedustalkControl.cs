@@ -17,7 +17,7 @@ namespace Wildlife.Tiles
 			{
             if(TileArray2.Contains(Framing.GetTileSafely(i,j-1).type) &&TileArray2.Contains(Framing.GetTileSafely(i,j-2).type))
             {
-                        if(Main.rand.Next(70)==0)
+                        if(Main.rand.Next(200)==0)
                         {
                             WorldGen.PlaceObject(i-1,j-1,mod.TileType("Medustalk"));
                             NetMessage.SendObjectPlacment(-1,i-1,j-1,mod.TileType("Medustalk"),0,0,-1,-1);
@@ -30,7 +30,7 @@ namespace Wildlife.Tiles
 			{
             if(TileArray2.Contains(Framing.GetTileSafely(i,j-1).type) &&TileArray2.Contains(Framing.GetTileSafely(i,j-2).type))
             {
-                        if(Main.rand.Next(70)==0)
+                        if(Main.rand.Next(300)==0)
                         {
                             WorldGen.PlaceObject(i-1,j-1,mod.TileType("FrostShine"));
                             NetMessage.SendObjectPlacment(-1,i-1,j-1,mod.TileType("FrostShine"),0,0,-1,-1);
@@ -43,7 +43,7 @@ namespace Wildlife.Tiles
 			{
             if(TileArray2.Contains(Framing.GetTileSafely(i,j-1).type) && (i < (Main.maxTilesX / 5) || i > Main.maxTilesX - (Main.maxTilesX / 5)))
             {
-                        if(Main.rand.Next(12)==0)
+                        if(Main.rand.Next(50)==0)
                         {
 						   
                              int why = Main.rand.Next(8);
@@ -71,7 +71,7 @@ namespace Wildlife.Tiles
 			
 			 if(TileArray2.Contains(Framing.GetTileSafely(i,j-1).type) &&TileArray2.Contains(Framing.GetTileSafely(i,j-2).type) && place)
             {
-                        if(Main.rand.Next(30) ==1)
+                        if(Main.rand.Next(170) ==1)
                         {
                             WorldGen.PlaceObject(i-1,j-1,mod.TileType("CatTail"));
                             NetMessage.SendObjectPlacment(-1,i-1,j-1,mod.TileType("CatTail"),0,0,-1,-1);
@@ -98,7 +98,7 @@ namespace Wildlife.Tiles
 			
 			 if(TileArray2.Contains(Framing.GetTileSafely(i,j-1).type) &&TileArray2.Contains(Framing.GetTileSafely(i,j-2).type) && place)
             {
-                        if(Main.rand.Next(11)==1)
+                        if(Main.rand.Next(50)==1)
                         {
                             WorldGen.PlaceObject(i-1,j-1,mod.TileType("MagmaCorn"));
                             NetMessage.SendObjectPlacment(-1,i-1,j-1,mod.TileType("MagmaCorn"),0,0,-1,-1);
@@ -115,7 +115,7 @@ namespace Wildlife.Tiles
 			
 			 if(TileArray2.Contains(Framing.GetTileSafely(i,j-1).type) &&TileArray2.Contains(Framing.GetTileSafely(i,j-2).type))
             {
-                        if(Main.rand.Next(160)==2)
+                        if(Main.rand.Next(600)==2)
                         {
                             WorldGen.PlaceObject(i-1,j-1,mod.TileType("StrawberryPlant"));
                             NetMessage.SendObjectPlacment(-1,i-1,j-1,mod.TileType("StrawberryPlant"),0,0,-1,-1);
@@ -131,7 +131,7 @@ namespace Wildlife.Tiles
 			{
             if(TileArray2.Contains(Framing.GetTileSafely(i,j-1).type) &&TileArray2.Contains(Framing.GetTileSafely(i,j-2).type))
             {
-                        if(Main.rand.Next(30)==0)
+                        if(Main.rand.Next(120)==0)
                         {
                             WorldGen.PlaceObject(i-1,j-1,mod.TileType("FluxCoral"));
                             NetMessage.SendObjectPlacment(-1,i-1,j-1,mod.TileType("FluxCoral"),0,0,-1,-1);
@@ -144,7 +144,7 @@ namespace Wildlife.Tiles
 			{
             if(TileArray2.Contains(Framing.GetTileSafely(i,j-1).type) &&TileArray2.Contains(Framing.GetTileSafely(i,j-2).type))
             {
-                        if(Main.rand.Next(25)==0)
+                        if(Main.rand.Next(200)==0)
                         {
                             WorldGen.PlaceObject(i-1,j-1,mod.TileType("Gelon"));
                             NetMessage.SendObjectPlacment(-1,i-1,j-1,mod.TileType("Gelon"),0,0,-1,-1);
@@ -157,7 +157,7 @@ namespace Wildlife.Tiles
 			{
             if(TileArray2.Contains(Framing.GetTileSafely(i,j-1).type) &&TileArray2.Contains(Framing.GetTileSafely(i,j-2).type))
             {
-                        if(Main.rand.Next(140)==0)
+                        if(Main.rand.Next(300)==0)
                         {
                             WorldGen.PlaceObject(i-1,j-1,mod.TileType("Jaderose"));
                             NetMessage.SendObjectPlacment(-1,i-1,j-1,mod.TileType("Jaderose"),0,0,-1,-1);

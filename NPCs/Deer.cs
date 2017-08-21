@@ -67,13 +67,16 @@ namespace Wildlife.NPCs
         }
         public override void AI()
 		{
+			npc.netUpdate = true;
 			if (npc.collideY)
 			{
 				jump = false;
+				npc.netUpdate = true;
 			}
 			if (npc.velocity.Y < 5)
 			{
 				npc.velocity.Y += 0.1f;
+				npc.netUpdate = true;
 			}
 			
 			npc.TargetClosest(true);
@@ -82,48 +85,60 @@ namespace Wildlife.NPCs
 			{
 				//run away
 				run = true;
+				npc.netUpdate = true;
 			}
 			
 			
 			
 			if (run)
 			{
+				npc.netUpdate = true;
 				if (npc.velocity.X == 0 && npc.velocity.Y >= 0 && !jump)
 				{
 					npc.velocity.Y = -6;
 					jump = true;
+					npc.netUpdate = true;
 				}
 				if (Math.Abs(player.Center.X - npc.Center.X) > 950)
 				{
 					npc.life = 0;
+					npc.netUpdate = true;
 				}
 				if (player.position.X > npc.position.X)
 				{
 					npc.velocity.X = -7;
 					npc.spriteDirection = 1;
+					npc.netUpdate = true;
 				}
 				else
 				{
 					npc.velocity.X = 7;
 					npc.spriteDirection = 0;
+					npc.netUpdate = true;
 				}
 				
 			}
 			else
 			{
+				npc.netUpdate = true;
 				timer++;
 				if (timer % 500 == 499)
 				{
+					npc.netUpdate = true;
 					direction = Main.rand.Next(2);
 					duration = Main.rand.Next(80,450);
+					npc.netUpdate = true;
+				
 				}
 				if (timer % 500 > 0 && timer % 500 < duration)
 				{
 					walk = true;
+					npc.netUpdate = true;
 				}
 				else
 				{
 				walk = false;
+				npc.netUpdate = true;
 				
 				if (direction == 0)
 				{
@@ -140,21 +155,25 @@ namespace Wildlife.NPCs
 			
 			if (walk && !run)
 			{
+				npc.netUpdate = true;
 				if (Math.Abs(npc.velocity.X) <= 0.25f && npc.velocity.Y >= 0.3f && !jump)
 				{
 					npc.velocity.Y = -6;
 					jump = true;
+					npc.netUpdate = true;
 				}
 				
 				if (direction == 0)
 				{
 					npc.velocity.X = -2f;
 					npc.spriteDirection = 1;
+					npc.netUpdate = true;
 				}
 				else
 				{
 					npc.velocity.X = 2f;
 					npc.spriteDirection = 0;
+					npc.netUpdate = true;
 				}
 			}
 		}

@@ -8,6 +8,7 @@ Dolphin
 Fox
 Fairy
 Snake (Has a gold variant)
+Turkey
 
 Plants include:
 
