@@ -9,6 +9,7 @@ Fox
 Fairy
 Snake (Has a gold variant)
 Turkey
+Fire Bug
 
 Plants include:
 
