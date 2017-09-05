@@ -29,6 +29,7 @@ namespace Wildlife.Items.Animals
 			item.useTime = 10;
 			item.useStyle = 1;
 			item.bait = 30;
+			item.noUseGraphic = true;
 			item.consumable = true;
 			item.value = Item.sellPrice(0, 0, 10, 0);
 		}
