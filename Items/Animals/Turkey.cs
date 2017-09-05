@@ -29,6 +29,7 @@ namespace Wildlife.Items.Animals
 			item.useStyle = 1;
 			item.consumable = true;
 			item.value = Item.sellPrice(0, 0, 5, 0);
+			item.noUseGraphic = true;
 		}
 		  public override bool UseItem(Player player)
         {
