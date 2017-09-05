@@ -27,6 +27,7 @@ namespace Wildlife.Items.Animals
 			item.noMelee = true;
 			item.useTime = 10;
 			item.useStyle = 1;
+			item.noUseGraphic = true;
 			item.consumable = true;
 			item.value = Item.sellPrice(0, 0, 40, 0);
 		}
