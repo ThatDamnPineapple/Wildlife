@@ -11,7 +11,7 @@ namespace Wildlife.NPCs
     {
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Fire Bug");
+            DisplayName.SetDefault("Infernal Mosquito");
 			Main.npcFrameCount[npc.type] = 3;
         }
         public override void SetDefaults()
