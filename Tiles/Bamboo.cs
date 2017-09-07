@@ -27,7 +27,7 @@ namespace Wildlife.Tiles
 			TileObjectData.addTile(Type);
 			ModTranslation name = CreateMapEntryName();
 			name.SetDefault("Bamboo");
-			AddMapEntry(new Color(200, 200, 200), name);
+			AddMapEntry(new Color(64, 115, 47), name);
 			dustType = 3;
 			adjTiles = new int[] { TileID.GrandfatherClocks };
 		}
