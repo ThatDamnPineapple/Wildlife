@@ -17,7 +17,7 @@ namespace Wildlife.Tiles
             Main.tileBlockLight[Type] = true;
             Main.tileLighted[Type] = true;
             AddMapEntry(new Color(32, 55, 187));
-
+			dustType = 29;
             TileObjectData.newTile.CoordinateHeights = new int[]
             {
                 16,
