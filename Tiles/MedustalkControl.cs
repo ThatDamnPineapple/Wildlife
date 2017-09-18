@@ -166,6 +166,22 @@ namespace Wildlife.Tiles
             }
 			}
 			
+			if (type == 2) //add water support later
+			{
+				
+			
+			 if(TileArray2.Contains(Framing.GetTileSafely(i,j-1).type) &&TileArray2.Contains(Framing.GetTileSafely(i,j-2).type))
+            {
+                        if(Main.rand.Next(1800)==2)
+                        {
+                            WorldGen.PlaceObject(i-1,j-1,mod.TileType("ForestPlant"));
+                            NetMessage.SendObjectPlacment(-1,i-1,j-1,mod.TileType("StrawberryPlant"),0,0,-1,-1);
+						
+							
+                        }            
+                
+            }
+			}	
         }
 	}
 }
