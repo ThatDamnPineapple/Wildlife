@@ -19,7 +19,16 @@ namespace Wildlife.Projectiles
 			projectile.CloneDefaults(ProjectileID.WoodenArrowFriendly);
 			projectile.penetrate = 2;
 		}
-
 		
+		public override void Kill(int timeLeft)
+		{
+			for (int i = 0; i < 5; i++)
+			{
+				int dust = Dust.NewDust(projectile.position, projectile.width, projectile.height, 0);
+				Main.dust[dust].scale = 1.2f;
+				Main.dust[dust].noGravity = true;
+			}
+			Main.PlaySound(0, (int)projectile.position.X, (int)projectile.position.Y);
+		}		
     }
 }
