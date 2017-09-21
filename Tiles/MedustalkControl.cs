@@ -30,7 +30,7 @@ namespace Wildlife.Tiles
 			{
             if(TileArray2.Contains(Framing.GetTileSafely(i,j-1).type) &&TileArray2.Contains(Framing.GetTileSafely(i,j-2).type))
             {
-                        if(Main.rand.Next(300)==0)
+                        if(Main.rand.Next(900)==0)
                         {
                             WorldGen.PlaceObject(i-1,j-1,mod.TileType("FrostShine"));
                             NetMessage.SendObjectPlacment(-1,i-1,j-1,mod.TileType("FrostShine"),0,0,-1,-1);
