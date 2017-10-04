@@ -30,6 +30,7 @@ namespace Wildlife.Tiles
 			AddMapEntry(new Color(64, 115, 47), name);
 			dustType = 3;
 			adjTiles = new int[] { TileID.GrandfatherClocks };
+            TileObjectData.newTile.DrawYOffset = 2;
 		}
 		
 		

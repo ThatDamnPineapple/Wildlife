@@ -17,6 +17,7 @@ namespace Wildlife.Tiles
             Main.tileBlockLight[Type] = true;
             Main.tileLighted[Type] = false;
             AddMapEntry(new Color(64, 150, 47));
+			TileObjectData.newTile.DrawYOffset = 2;
 
             TileObjectData.newTile.CoordinateHeights = new int[]
             {
