@@ -78,6 +78,16 @@ namespace Wildlife.NPCs
 			}
 			Lighting.AddLight(npc.position, RGB.X, RGB.Y, RGB.Z);
 			
-		} 
+		}
+		public override void HitEffect(int hitDirection, double damage)
+        {
+            if (npc.life <= 0)
+            {
+                Gore.NewGore(npc.position, npc.velocity, mod.GetGoreSlot("Gores/Coin/Coin_1"), 1f);
+                 Gore.NewGore(npc.position, npc.velocity, mod.GetGoreSlot("Gores/Coin/Coin_2"), 1f);
+				  Gore.NewGore(npc.position, npc.velocity, mod.GetGoreSlot("Gores/Coin/Coin_3"), 1f);
+				   Gore.NewGore(npc.position, npc.velocity, mod.GetGoreSlot("Gores/Coin/Coin_4"), 1f);
+            }
+        }
     }
 }

@@ -88,6 +88,16 @@ namespace Wildlife.NPCs
 			
 			//npc.rotation = direction.ToRotation();
 			
-		} 
+		}
+		public override void HitEffect(int hitDirection, double damage)
+        {
+            if (npc.life <= 0)
+            {
+                Gore.NewGore(npc.position, npc.velocity, mod.GetGoreSlot("Gores/Netch/Netch_1"), 1f);
+                 Gore.NewGore(npc.position, npc.velocity, mod.GetGoreSlot("Gores/Netch/Netch_2"), 1f);
+				  Gore.NewGore(npc.position, npc.velocity, mod.GetGoreSlot("Gores/Netch/Netch_3"), 1f);
+				   Gore.NewGore(npc.position, npc.velocity, mod.GetGoreSlot("Gores/Netch/Netch_4"), 1f);
+            }
+        }
     }
 }
