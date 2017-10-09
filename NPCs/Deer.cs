@@ -22,8 +22,8 @@ namespace Wildlife.NPCs
         }
         public override void SetDefaults()
         {
-            npc.width = 82;
-            npc.height = 80;
+            npc.width = 68;
+            npc.height = 72;
             npc.damage = 0;
 			npc.chaseable = false;
             npc.defense = 0;
