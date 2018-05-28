@@ -9,10 +9,10 @@ namespace Wildlife.NPCs
 {
     public class Turtle : ModNPC
     {
-		int timer = 0;
+		//npc.ai[0] = 0; //npc.ai[0]
 		bool walk = false;
-		int direction = 0;
-		int duration = 0;
+		//npc.ai[1] = 0;
+		//npc.ai[2] = 0;
         public override void SetStaticDefaults()
         {
             DisplayName.SetDefault("Turtle");
@@ -39,6 +39,10 @@ namespace Wildlife.NPCs
 
 				public override float SpawnChance(NPCSpawnInfo spawnInfo)
         {
+			if (SpawnCondition.Cavern.Chance != 0)
+			{
+				return 0.0f;
+			}
             return !spawnInfo.invasion && !spawnInfo.sky && !Main.eclipse && spawnInfo.player.ZoneJungle ? 0.15f : 0f;
         }
 		
@@ -51,14 +55,14 @@ namespace Wildlife.NPCs
 			npc.frameCounter %= (double)10;
 			int num = (int)npc.frameCounter;
 			npc.frame.Y = num * frameHeight;
-		//	npc.spriteDirection = npc.direction;
+		//	npc.spriteDirection = npc.npc.ai[1];
 			}
 			else
 			{
 				npc.frame.Y = 0;
 			}
         }
-        public override void AI()
+        public override bool PreAI()
 		{
 			if (npc.wet)
 			{
@@ -78,13 +82,13 @@ namespace Wildlife.NPCs
 			
 			
 			
-				timer++;
-				if (timer % 700 == 599)
+				npc.ai[0]++;
+				if (npc.ai[0] % 700 == 599)
 				{
-					direction = Main.rand.Next(2);
-					duration = Main.rand.Next(80,450);
+					npc.ai[1] = Main.rand.Next(2);
+					npc.ai[2] = Main.rand.Next(80,450);
 				}
-				if (timer % 700 > 0 && timer % 700 < duration)
+				if (npc.ai[0] % 700 > 0 && npc.ai[0] % 700 < npc.ai[2])
 				{
 					walk = true;
 				}
@@ -92,7 +96,7 @@ namespace Wildlife.NPCs
 				{
 				walk = false;
 				
-				if (direction == 0)
+				if (npc.ai[1] == 0)
 				{
 					npc.spriteDirection = 1;
 				}
@@ -111,7 +115,7 @@ namespace Wildlife.NPCs
 					npc.velocity.Y = -4;
 				}
 				
-				if (direction == 0)
+				if (npc.ai[1] == 0)
 				{
 					npc.velocity.X = -0.75f;
 					npc.spriteDirection = 1;
@@ -122,6 +126,7 @@ namespace Wildlife.NPCs
 					npc.spriteDirection = 0;
 				}
 			}
+			return false;
 		}
 		public override void HitEffect(int hitDirection, double damage)
         {

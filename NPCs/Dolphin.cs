@@ -9,7 +9,7 @@ namespace Wildlife.NPCs
 {
     public class Dolphin : ModNPC
     {
-		int timer = 0;
+		//npc.ai[0] = 0;
 		bool jump = false;
         public override void SetStaticDefaults()
         {
@@ -112,8 +112,8 @@ namespace Wildlife.NPCs
 				
 			}
 			
-			timer++;
-			if (timer % 600 == 0 && npc.wet)
+			npc.ai[0]++;
+			if (npc.ai[0] % 600 == 0 && npc.wet)
 			{
 				jump = true;
 			}

@@ -10,10 +10,10 @@ namespace Wildlife.NPCs
     public class Deer : ModNPC
     {
 		bool run = false;
-		int timer = 0;
+	//	npc.ai[0] = 0; //timer
 		bool walk = false;
-		int direction = 0;
-		int duration = 0;
+		//npc.ai[1] = 0; //direction
+		//npc.ai[2] = 0; //duration
 		bool jump = false;
         public override void SetStaticDefaults()
         {
@@ -39,6 +39,10 @@ namespace Wildlife.NPCs
 
 				public override float SpawnChance(NPCSpawnInfo spawnInfo)
         {
+			if (SpawnCondition.Cavern.Chance != 0)
+			{
+				return 0.0f;
+			}
             return spawnInfo.spawnTileY < Main.rockLayer && Main.dayTime && !spawnInfo.invasion && !spawnInfo.sky && !Main.eclipse && !spawnInfo.player.ZoneDesert && !spawnInfo.player.ZoneJungle ? 0.06f : 0f;
         }
 		
@@ -50,7 +54,7 @@ namespace Wildlife.NPCs
 			npc.frameCounter %= (double)5;
 			int num = (int)npc.frameCounter + 1;
 			npc.frame.Y = num * frameHeight;
-			//npc.spriteDirection = npc.direction;
+			//npc.spriteDirection = npc.npc.ai[1];
 			}
 			else
 			{
@@ -62,7 +66,7 @@ namespace Wildlife.NPCs
 			npc.frameCounter %= (double)5;
 			int num = (int)npc.frameCounter + 1;
 			npc.frame.Y = num * frameHeight;
-		//	npc.spriteDirection = npc.direction;
+		//	npc.spriteDirection = npc.npc.ai[1];
 			}
         }
         public override void AI()
@@ -121,16 +125,16 @@ namespace Wildlife.NPCs
 			else
 			{
 				npc.netUpdate = true;
-				timer++;
-				if (timer % 500 == 499)
+				npc.ai[0]++;
+				if (npc.ai[0] % 500 == 499)
 				{
 					npc.netUpdate = true;
-					direction = Main.rand.Next(2);
-					duration = Main.rand.Next(80,450);
+					npc.ai[1] = Main.rand.Next(2);
+					npc.ai[2] = Main.rand.Next(80,450);
 					npc.netUpdate = true;
 				
 				}
-				if (timer % 500 > 0 && timer % 500 < duration)
+				if (npc.ai[0] % 500 > 0 && npc.ai[0] % 500 < npc.ai[2])
 				{
 					walk = true;
 					npc.netUpdate = true;
@@ -140,7 +144,7 @@ namespace Wildlife.NPCs
 				walk = false;
 				npc.netUpdate = true;
 				
-				if (direction == 0)
+				if (npc.ai[1] == 0)
 				{
 					npc.spriteDirection = 1;
 				}
@@ -163,7 +167,7 @@ namespace Wildlife.NPCs
 					npc.netUpdate = true;
 				}
 				
-				if (direction == 0)
+				if (npc.ai[1] == 0)
 				{
 					npc.velocity.X = -2f;
 					npc.spriteDirection = 1;
