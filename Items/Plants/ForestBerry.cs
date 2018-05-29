@@ -11,7 +11,7 @@ namespace Wildlife.Items.Plants
 		public override void SetStaticDefaults()
 		{
 			DisplayName.SetDefault("Nymph Berries");
-           Tooltip.SetDefault("Increases life regeneration\n'Refreshing and renewable'");
+           Tooltip.SetDefault("Increases life regeneration and slightly increases movement speed\n'Refreshing and renewable'");
         }
 		 public override void SetDefaults()
         {

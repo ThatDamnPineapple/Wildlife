@@ -8,12 +8,12 @@ using System;
 
 namespace Wildlife.Projectiles
 {
-	public class OysterBulletProj : ModProjectile
+	public class EarthenBlast : ModProjectile
 	{
 		public override void SetDefaults()
 		{
-			projectile.width = 2;
-			projectile.height = 10;
+			projectile.width = 13;
+			projectile.height = 13;
 			projectile.aiStyle = 1;
 			projectile.friendly = true;
 			projectile.ranged = true;
@@ -23,11 +23,12 @@ namespace Wildlife.Projectiles
 			projectile.extraUpdates = 1;
 			aiType = ProjectileID.Bullet;
 			projectile.tileCollide = true;
+            projectile.damage = 6;
 		}
 		
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("OysterRound");
+			DisplayName.SetDefault("Earthen Blast");
 		}
 		
 		public override void Kill(int timeLeft)
@@ -35,13 +36,13 @@ namespace Wildlife.Projectiles
 			{
 				float sX = (float)Main.rand.Next(-60, 61) * 0.1f;
 				float sY = (float)Main.rand.Next(-60, 61) * 0.1f;
-				int z = Projectile.NewProjectile(projectile.position.X, projectile.position.Y, sX, sY, mod.ProjectileType("OysterShard"), projectile.damage / 2, 5f, projectile.owner);
-			    int r = Projectile.NewProjectile(projectile.position.X, projectile.position.Y, sX, sY, mod.ProjectileType("OysterShard"), projectile.damage / 2, 5f, projectile.owner);
-				Main.projectile[z].ranged = false;
-				Main.projectile[z].thrown = true;
-				int dust = Dust.NewDust(projectile.position, projectile.width, projectile.height, 0);
-				Main.dust[dust].scale = 1.5f;
-				Main.dust[dust].noGravity = true;
+			    Vector2 vector2 = new Vector2(projectile.width/2, projectile.height/2);
+			    int dust;
+			    dust = Dust.NewDust(projectile.position + vector2, 0, 0, mod.DustType("EarthDust"));
+			    dust = Dust.NewDust(projectile.position + vector2, 0, 0, mod.DustType("EarthDust"));
+			    dust = Dust.NewDust(projectile.position + vector2, 0, 0, mod.DustType("EarthDust"));
+			    dust = Dust.NewDust(projectile.position + vector2, 0, 0, mod.DustType("EarthDust"));
+			    dust = Dust.NewDust(projectile.position + vector2, 0, 0, mod.DustType("EarthDust"));
 			}	
 		}
 	}
