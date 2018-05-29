@@ -4,19 +4,17 @@ using Terraria;
 using Terraria.ModLoader;
 using Terraria.ID;
 
-namespace Wildlife.Item.Drops 
+namespace Wildlife.Items.Drops
 {
 public class OysterBullet : ModItem
 {
 	
     public override void SetDefaults()
     {
-
         item.damage = 8;
         item.ranged = true;
         item.width = 22;
         item.height = 22;
-
 		item.shootSpeed = 5f;
 		item.shoot = mod.ProjectileType("OysterBulletProj");
         item.knockBack = 0f;
