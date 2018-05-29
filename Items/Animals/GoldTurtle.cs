@@ -26,7 +26,7 @@ namespace Wildlife.Items.Animals
 			item.useAnimation = 15;
 			item.noMelee = true;
 			item.useTime = 10;
-			item.value = 500000;
+			item.value = 100000;
 			item.useStyle = 1;
 			item.consumable = true;
 			item.noUseGraphic = true;

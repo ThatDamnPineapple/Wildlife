@@ -25,7 +25,7 @@ namespace Wildlife.Items.Drops
 
             item.maxStack = 999;
 
-            item.damage = 7;
+            item.damage = 15;
 			item.knockBack = 2f;
             item.ammo = AmmoID.Arrow;
 

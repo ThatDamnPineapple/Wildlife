@@ -16,9 +16,9 @@ namespace Wildlife.Items.Banners
 			item.useTime = 10;
 			item.useStyle = 1;
 			item.consumable = true;
-			item.rare = 1;
-			item.value = Item.buyPrice(0, 0, 10, 0);
 			item.createTile = mod.TileType("TurtleBanner");
+			item.rare = 1;
+			item.value = 1000;
 			item.placeStyle = 1;		//Place style means which frame(Horizontally, starting from 0) of the tile should be placed
 		}
 	}

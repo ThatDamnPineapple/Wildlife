@@ -1,9 +1,10 @@
-using Terraria;
-using System;
-using Terraria.ID;
-using System.Diagnostics;
 using Microsoft.Xna.Framework;
+using Terraria;
+using Terraria.ID;
 using Terraria.ModLoader;
+using Terraria.GameContent.Events;
+using System;
+using System.Diagnostics;
 
 namespace Wildlife.NPCs
 {

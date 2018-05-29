@@ -31,7 +31,7 @@ namespace Wildlife.Items.Animals
 			item.bait = 30;
 			item.noUseGraphic = true;
 			item.consumable = true;
-			item.value = Item.sellPrice(0, 0, 10, 0);
+			item.value = 1000;
 		}
 		  public override bool UseItem(Player player)
         {
