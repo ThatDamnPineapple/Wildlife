@@ -90,9 +90,9 @@ namespace Wildlife.NPCs
         {
             if (npc.life <= 0)
             {
-                Gore.NewGore(npc.position, npc.velocity, 13);
-				Gore.NewGore(npc.position, npc.velocity, 12);
-				Gore.NewGore(npc.position, npc.velocity, 11);
+                Gore.NewGore(npc.position, npc.velocity, mod.GetGoreSlot("Gores/Oyster1"), 1f);
+                 Gore.NewGore(npc.position, npc.velocity, mod.GetGoreSlot("Gores/Oyster2"), 1f);
+				  Gore.NewGore(npc.position, npc.velocity, mod.GetGoreSlot("Gores/Oyster3"), 1f);
             }
         }
     }

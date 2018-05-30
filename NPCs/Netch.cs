@@ -25,19 +25,18 @@ namespace Wildlife.NPCs
 			npc.aiStyle = -1;
             npc.lifeMax = 35;
 			Main.npcCatchable[npc.type] = true;
-            npc.catchItem = (short)mod.ItemType("Dragonfly");
-          npc.HitSound = SoundID.NPCHit2;
+            npc.HitSound = SoundID.NPCHit2;
 			npc.DeathSound = SoundID.NPCDeath6;
             npc.value = 0f;
-				npc.noGravity = true;
-				npc.noTileCollide = true;
+			npc.noGravity = true;
+			npc.noTileCollide = true;
             npc.knockBackResist = 0.25f;
   
         }
 
-				public override float SpawnChance(NPCSpawnInfo spawnInfo)
+		public override float SpawnChance(NPCSpawnInfo spawnInfo)
         {
-            return !spawnInfo.invasion && spawnInfo.sky && !Main.eclipse && !spawnInfo.player.ZoneJungle && Main.dayTime ? 0.1f : 0f;
+            return !spawnInfo.invasion && spawnInfo.sky && !Main.eclipse && Main.dayTime ? 0.1f : 0f;
         }
 		public override void FindFrame(int frameHeight)
         {

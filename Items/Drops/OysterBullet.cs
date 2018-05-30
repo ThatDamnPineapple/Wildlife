@@ -11,7 +11,7 @@ public class OysterBullet : ModItem
 	
     public override void SetDefaults()
     {
-        item.damage = 8;
+        item.damage = 11;
         item.ranged = true;
         item.width = 22;
         item.height = 22;
@@ -30,7 +30,7 @@ public class OysterBullet : ModItem
     public override void SetStaticDefaults()
     {
       DisplayName.SetDefault("Oyster Round");
-      Tooltip.SetDefault("Splits into pieces on hit \nDoes not do knockback");
+      Tooltip.SetDefault("Splits into pieces on hit \nDoes not do additional knockback, unlike normal bullets");
     }
 
 		

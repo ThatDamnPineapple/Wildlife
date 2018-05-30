@@ -4,6 +4,7 @@ using Terraria.ID;
 using System.Diagnostics;
 using Microsoft.Xna.Framework;
 using Terraria.ModLoader;
+using Terraria.GameContent.Events;
 
 namespace Wildlife.NPCs
 {
@@ -44,7 +45,7 @@ namespace Wildlife.NPCs
 			{
 				return 0.0f;
 			}
-            return !spawnInfo.invasion && !spawnInfo.sky && !Main.eclipse && spawnInfo.player.ZoneDesert ? 0.2f : 0f;
+            return !spawnInfo.invasion && !spawnInfo.sky && !Main.eclipse && spawnInfo.player.ZoneDesert && !Sandstorm.Happening ? 0.2f : 0f;
         }
 		
         public override void FindFrame(int frameHeight)
