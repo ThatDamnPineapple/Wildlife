@@ -41,7 +41,8 @@ namespace Wildlife.Items.Potions
         {
             ModRecipe recipe = new ModRecipe(mod);
 			recipe.AddIngredient(298, 1);
-            recipe.AddIngredient(null, "FluxCoral", 1);
+            recipe.AddIngredient(null, "FluxCoral", 2);
+            recipe.AddIngredient(null, "FrostShine", 1);
             recipe.AddTile(TileID.Bottles);
             recipe.SetResult(this);
             recipe.AddRecipe();
