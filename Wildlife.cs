@@ -106,7 +106,17 @@ namespace Wildlife
 			recipe11.AddIngredient(317, 1);
             recipe11.AddTile(TileID.Bottles);
             recipe11.SetResult(2348);
-            recipe11.AddRecipe();
+            recipe11.AddRecipe();			
+			
+			ModRecipe recipe12 = new ModRecipe(this); //grav
+			recipe12.AddIngredient(ItemID.BottledWater, 1);
+            recipe12.AddIngredient(null, "MagmaCorn", 2);
+            recipe12.AddIngredient(null, "FluxCoral", 2);
+            recipe12.AddIngredient(null, "Jaderose", 1);
+			recipe12.AddIngredient(331, 1);
+            recipe12.AddTile(TileID.Bottles);
+            recipe12.SetResult(305);
+            recipe12.AddRecipe();
         }
 	}
 }

@@ -13,7 +13,7 @@ namespace Wildlife.Items.Potions
 		public override void SetStaticDefaults()
 		{
 			DisplayName.SetDefault("Molten Potion");
-           Tooltip.SetDefault("Melee attacks set enemies on fire");
+           Tooltip.SetDefault("Attacks set enemies on fire");
 
         }
 		 public override void SetDefaults()
