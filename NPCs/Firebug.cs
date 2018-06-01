@@ -37,7 +37,7 @@ namespace Wildlife.NPCs
 
 		 public override float SpawnChance(NPCSpawnInfo spawnInfo)
         {
-            return spawnInfo.player.ZoneUnderworldHeight ? 0.2f : 0f;
+            return spawnInfo.player.ZoneUnderworldHeight ? 0.05f : 0f;
         }
 		public override void FindFrame(int frameHeight)
         {

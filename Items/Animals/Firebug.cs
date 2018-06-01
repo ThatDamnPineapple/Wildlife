@@ -28,7 +28,7 @@ namespace Wildlife.Items.Animals
 			item.noMelee = true;
 			item.useTime = 10;
 			item.useStyle = 1;
-			item.bait = 30;
+			item.bait = 35;
 			item.noUseGraphic = true;
 			item.consumable = true;
 			item.value = 1000;
