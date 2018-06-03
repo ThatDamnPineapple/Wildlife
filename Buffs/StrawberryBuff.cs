@@ -12,7 +12,7 @@ namespace Wildlife.Buffs
         public override void SetDefaults()
         {
              DisplayName.SetDefault("Sweet Adrenaline");
-            Description.SetDefault("Increasess movement speed");
+            Description.SetDefault("Increased movement speed");
        
             Main.pvpBuff[Type] = true;
             Main.buffNoTimeDisplay[Type] = false;
