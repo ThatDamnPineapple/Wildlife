@@ -15,26 +15,11 @@ namespace Wildlife
 {
 	public class WildlifePlayer : ModPlayer
 	{
-		public bool Quake;
+		public bool Fairy;
 		
 		public override void ResetEffects()
 		{
-			Quake = false;
+			Fairy = false;
         }
-		public override void OnHitNPC(Item item, NPC target, int damage, float knockback, bool crit)
-		{
-				if (Quake == true)
-                {
-					target.AddBuff(mod.BuffType("QuakeHurt"), 12, false);
-                }
-		}
-		
-		public override void OnHitNPCWithProj(Projectile projectile, NPC target, int damage, float knockBack, bool Crit)
-		{
-				if (Quake == true)
-                {
-					target.AddBuff(mod.BuffType("QuakeHurt"), 12, false);
-				}
-     		}
-		}
-	}
+    }
+}

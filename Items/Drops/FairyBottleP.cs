@@ -13,7 +13,7 @@ namespace Wildlife.Items.Drops
 		public override void SetStaticDefaults()
 		{
 			DisplayName.SetDefault("Bottled Fairy");
-            //Tooltip.SetDefault("Restores 160 life");
+            //Tooltip.SetDefault("Restores 170 life");
 
         }
 		public override void SetDefaults()
@@ -26,7 +26,7 @@ namespace Wildlife.Items.Drops
             item.maxStack = 30;
 			item.potion = true;
             item.consumable = true;
-			item.healLife = 160;
+			item.healLife = 170;
             item.value = 3500;
             item.rare = 5;
             return;

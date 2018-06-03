@@ -34,10 +34,14 @@ namespace Wildlife.NPCs
   
         }
 
-				public override float SpawnChance(NPCSpawnInfo spawnInfo)
-        {
-            return !spawnInfo.invasion && !spawnInfo.sky && !Main.eclipse && spawnInfo.player.ZoneHoly && !Main.dayTime ? 0.2f : 0f;
-        }
+		public override float SpawnChance(NPCSpawnInfo spawnInfo)
+        {			
+            return !spawnInfo.invasion && !spawnInfo.sky && !Main.eclipse && spawnInfo.player.ZoneHoly && !Main.dayTime ? 0.05f : 0f;
+			int x = spawnInfo.spawnTileX;
+			int y = spawnInfo.spawnTileY;
+			int tile = (int)Main.tile[x, y].type;
+			return !spawnInfo.invasion && !spawnInfo.sky && !Main.eclipse && spawnInfo.player.ZoneHoly && !Main.dayTime && (tile == mod.TileType("OrbTile")) ? 0.15f : 0f;
+		}
 		public override void FindFrame(int frameHeight)
         {
 			

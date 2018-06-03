@@ -12,8 +12,8 @@ namespace Wildlife.Items.Plants
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Medusa Berry");
-            Tooltip.SetDefault("Has a chance to petrify you.\n'Life is given for a price'");
+			DisplayName.SetDefault("Forbidden Fruit");
+            Tooltip.SetDefault("Has a chance to petrify you for a short time\n'Life is given for a price'");
 
         }
 		public override void SetDefaults()
@@ -26,7 +26,7 @@ namespace Wildlife.Items.Plants
             item.maxStack = 30;
             item.potion = true;
             item.consumable = true;
-			item.healLife = 120;
+			item.healLife = 130;
             item.value = 3500;
 			
             item.rare = 0;
