@@ -1,9 +1,16 @@
-using Terraria;
 using System;
-using Terraria.ID;
-using System.Diagnostics;
+using System.Collections.Generic;
+using System.IO;
 using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Graphics;
+using Terraria.ModLoader.IO;
+using Terraria.DataStructures;
+using Terraria.GameInput;
+using Terraria.ID;
 using Terraria.ModLoader;
+using Terraria.Localization;
+using Terraria;
+using Terraria.GameContent.Events;
 
 namespace Wildlife.NPCs
 {
@@ -28,16 +35,20 @@ namespace Wildlife.NPCs
             npc.DeathSound = SoundID.NPCDeath1;
             npc.value = 0f;
 			npc.aiStyle = 64;
-				aiType = 358;
-				npc.noGravity = true;
+			aiType = 358;
+			npc.noGravity = true;
             npc.knockBackResist = .25f;
   
         }
 
-				public override float SpawnChance(NPCSpawnInfo spawnInfo)
-        {
-            return !spawnInfo.invasion && !spawnInfo.sky && !Main.eclipse && spawnInfo.player.ZoneHoly && !Main.dayTime ? 0.2f : 0f;
-        }
+		public override float SpawnChance(NPCSpawnInfo spawnInfo)
+        {			
+            return !spawnInfo.invasion && !spawnInfo.sky && !Main.eclipse && spawnInfo.player.ZoneHoly && !Main.dayTime ? 0.05f : 0f;
+			int x = spawnInfo.spawnTileX;
+			int y = spawnInfo.spawnTileY;
+			int tile = (int)Main.tile[x, y].type;
+			return !spawnInfo.invasion && !spawnInfo.sky && !Main.eclipse && spawnInfo.player.ZoneHoly && !Main.dayTime && (tile == mod.TileType("OrbTile")) ? 0.15f : 0f;
+		}
 		public override void FindFrame(int frameHeight)
         {
 			
@@ -51,7 +62,7 @@ namespace Wildlife.NPCs
 		
         public override void AI()
 		{
-			Vector3 RGB = new Vector3(1f, 0.0f, 0.3f);
+			Vector3 RGB = new Vector3(2.5f, 1.5f, 2f);
 			npc.TargetClosest();
 			float multiplier = 0.75f;
 			float max = 2.25f;
