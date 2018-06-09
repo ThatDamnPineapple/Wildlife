@@ -26,7 +26,7 @@ namespace Wildlife.NPCs
             npc.height = 20;
             npc.damage = 0;
             npc.defense = 0;
-            npc.lifeMax = 10;
+            npc.lifeMax = 5;
 			npc.chaseable = false;
 			Main.npcCatchable[npc.type] = true;
             npc.catchItem = (short)mod.ItemType("Snake");

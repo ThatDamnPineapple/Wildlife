@@ -37,8 +37,10 @@ namespace Wildlife.Projectiles
 				float sY = (float)Main.rand.Next(-60, 61) * 0.1f;
 				int z = Projectile.NewProjectile(projectile.position.X, projectile.position.Y, sX, sY, mod.ProjectileType("OysterShard"), projectile.damage / 2, 5f, projectile.owner);
 			    int r = Projectile.NewProjectile(projectile.position.X, projectile.position.Y, sX, sY, mod.ProjectileType("OysterShard"), projectile.damage / 2, 5f, projectile.owner);
-				Main.projectile[z].ranged = false;
-				Main.projectile[z].thrown = true;
+			    int e = Projectile.NewProjectile(projectile.position.X, projectile.position.Y, sX, sY, mod.ProjectileType("OysterShard"), projectile.damage / 2, 5f, projectile.owner);
+				Main.projectile[z].ranged = true;
+				Main.projectile[r].ranged = true;
+				Main.projectile[e].ranged = true;
 				int dust = Dust.NewDust(projectile.position, projectile.width, projectile.height, 0);
 				Main.dust[dust].scale = 1.5f;
 				Main.dust[dust].noGravity = true;

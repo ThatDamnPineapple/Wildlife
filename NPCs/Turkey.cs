@@ -26,16 +26,13 @@ namespace Wildlife.NPCs
             npc.damage = 0;
 			npc.chaseable = false;
             npc.defense = 0;
-            npc.lifeMax = 10;
+            npc.lifeMax = 5;
 			Main.npcCatchable[npc.type] = true;
             npc.catchItem = (short)mod.ItemType("Turkey");
             npc.HitSound = SoundID.NPCHit1;
             npc.DeathSound = SoundID.NPCDeath1;
             npc.value = 0f;
             npc.knockBackResist = .25f;
-			banner = npc.type;
-			bannerItem = mod.ItemType("TurkeyBanner");
-  
         }
 
 				public override float SpawnChance(NPCSpawnInfo spawnInfo)
@@ -44,7 +41,7 @@ namespace Wildlife.NPCs
 			{
 				return 0.0f;
 			}
-            return spawnInfo.spawnTileY < Main.rockLayer && !spawnInfo.invasion && !spawnInfo.sky && !Main.eclipse && !spawnInfo.player.ZoneDesert && !spawnInfo.player.ZoneJungle ? 0.08f : 0f;
+            return spawnInfo.spawnTileY < Main.rockLayer && !spawnInfo.invasion && !spawnInfo.sky && !Main.eclipse && !spawnInfo.player.ZoneDesert && !spawnInfo.player.ZoneJungle ? 0.02f : 0f;
         }
 		
         public override void FindFrame(int frameHeight)

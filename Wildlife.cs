@@ -51,10 +51,10 @@ namespace Wildlife
 			
 			ModRecipe recipe5 = new ModRecipe(this); //Lesser Healing
 			recipe5.AddIngredient(ItemID.BottledWater, 1);
-            recipe5.AddIngredient(null, "Strawberry", 2);
+            recipe5.AddIngredient(null, "Strawberry", 1);
 			recipe5.AddIngredient(313, 1);
             recipe5.AddTile(TileID.Bottles);
-            recipe5.SetResult(28);
+            recipe5.SetResult(28, 5);
             recipe5.AddRecipe();
 			
 			ModRecipe recipe6 = new ModRecipe(this); //hunting

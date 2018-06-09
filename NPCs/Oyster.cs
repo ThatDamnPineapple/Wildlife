@@ -27,8 +27,8 @@ namespace Wildlife.NPCs
 			npc.velocity.X = 1;
             npc.lifeMax = 10;
 			//npc.aiStyle = 0;
-            npc.HitSound = SoundID.NPCHit1;
-            npc.DeathSound = SoundID.NPCDeath1;
+			npc.HitSound = SoundID.NPCHit41;
+			npc.DeathSound = SoundID.NPCHit41;
             npc.value = 0f;
             npc.knockBackResist = .25f;
 		//	banner = npc.type;

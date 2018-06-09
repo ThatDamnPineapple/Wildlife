@@ -30,7 +30,7 @@ namespace Wildlife.Items.Potions
             item.height = 30;
           
             item.value = 2500;
-            item.rare = 5;
+            item.rare = 1;
             item.buffType = mod.BuffType("Bounce");
             item.buffTime = 25000;
            // return;

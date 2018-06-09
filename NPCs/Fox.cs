@@ -26,7 +26,7 @@ namespace Wildlife.NPCs
             npc.damage = 0;
 			npc.chaseable = false;
             npc.defense = 0;
-            npc.lifeMax = 10;
+            npc.lifeMax = 5;
 			Main.npcCatchable[npc.type] = true;
             npc.catchItem = (short)mod.ItemType("Fox");
             npc.HitSound = SoundID.NPCHit1;
