@@ -11,7 +11,7 @@ namespace Wildlife.Buffs
     {
         public override void SetDefaults()
         {
-             DisplayName.SetDefault("Bounce");
+             DisplayName.SetDefault("Steelfall");
             Description.SetDefault("You don't take fall damage");
        
             Main.pvpBuff[Type] = true;

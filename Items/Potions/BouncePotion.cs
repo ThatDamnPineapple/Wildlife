@@ -12,7 +12,7 @@ namespace Wildlife.Items.Potions
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Bounce Potion");
+			DisplayName.SetDefault("Steelfall Potion");
            Tooltip.SetDefault("Grants immunity to fall damage");
 
         }

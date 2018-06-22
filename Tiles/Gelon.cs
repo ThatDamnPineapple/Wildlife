@@ -31,17 +31,6 @@ namespace Wildlife.Tiles
 
             TileObjectData.addTile(Type);
         }
-		
-		public override void ModifyLight(int i, int j, ref float r, ref float g, ref float b)
-		{
-			Tile tile = Main.tile[i, j];
-			if (tile.frameX < 66)
-			{
-				r = 0f;
-				g = 0.75f;
-				b = 1.25f;
-			}
-		}
 		public override void PostDraw(int i, int j, SpriteBatch spriteBatch)
 		{
 			Tile tile = Main.tile[i, j];
