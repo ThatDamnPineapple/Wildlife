@@ -22,6 +22,7 @@ namespace Wildlife.Tiles
             Main.tileLighted[Type] = true;
             AddMapEntry(new Color(21, 134, 255));
 			dustType = 67;
+			Main.tileCut[Type] = true;
             TileObjectData.newTile.DrawYOffset = 2;
             TileObjectData.newTile.CoordinateHeights = new int[]
             {

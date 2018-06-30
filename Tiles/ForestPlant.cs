@@ -18,7 +18,7 @@ namespace Wildlife.Tiles
             Main.tileLighted[Type] = false;
             AddMapEntry(new Color(64, 150, 47));
 			TileObjectData.newTile.DrawYOffset = 2;
-
+			Main.tileCut[Type] = true;
             TileObjectData.newTile.CoordinateHeights = new int[]
             {
                 16,
@@ -34,6 +34,7 @@ namespace Wildlife.Tiles
         }
        public override void KillMultiTile(int i, int j, int frameX, int frameY)
         {
+            Main.PlaySound(6, i * 16, j * 16);		
             Item.NewItem(i * 16, j * 16, 48, 48, mod.ItemType("ForestBerry"));
                 Item.NewItem(i * 16, j * 16, 48, 48, mod.ItemType("ForestBerry"));
             if (Main.rand.Next(2) == 0)

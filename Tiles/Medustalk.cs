@@ -20,6 +20,7 @@ namespace Wildlife.Tiles
             AddMapEntry(new Color(96, 174, 91));
 			TileObjectData.newTile.Height = 3;
 			dustType = 39;
+			Main.tileCut[Type] = true;
 			TileObjectData.newTile.DrawYOffset = 2;
             TileObjectData.newTile.CoordinateHeights = new int[]
             {
@@ -38,8 +39,8 @@ namespace Wildlife.Tiles
         }
        public override void KillMultiTile(int i, int j, int frameX, int frameY)
         {
-            
-                Item.NewItem(i * 16, j * 16, 48, 48, mod.ItemType("MedusaBerry"));
+            Main.PlaySound(15, i * 16, j * 16, 2);	           
+            Item.NewItem(i * 16, j * 16, 48, 48, mod.ItemType("MedusaBerry"));
             if (Main.rand.Next(2) == 0)
 			{
 			Item.NewItem(i * 16, j * 16, 48, 48, mod.ItemType("MedusaBerry"));

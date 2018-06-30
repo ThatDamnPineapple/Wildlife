@@ -22,6 +22,7 @@ namespace Wildlife.Tiles
             Main.tileLighted[Type] = true;
             AddMapEntry(new Color(32, 55, 187));
 			dustType = 29;
+			Main.tileCut[Type] = true;
 			TileObjectData.newTile.DrawYOffset = 2;
             TileObjectData.newTile.CoordinateHeights = new int[]
             {
@@ -49,6 +50,7 @@ namespace Wildlife.Tiles
         }
       public override void KillMultiTile(int i, int j, int frameX, int frameY)
         {
+            Main.PlaySound(4, i * 16, j * 16, 1);		
             Item.NewItem(i * 16, j * 16, 48, 48, mod.ItemType("GelonSlice"));
                 Item.NewItem(i * 16, j * 16, 48, 48, mod.ItemType("GelonSlice"));
             if (Main.rand.Next(2) == 0)
