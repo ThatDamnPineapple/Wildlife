@@ -28,7 +28,7 @@ namespace Wildlife.NPCs
             npc.damage = 0;
 			npc.chaseable = false;
             npc.defense = 0;
-            npc.lifeMax = 40;
+            npc.lifeMax = 10;
             npc.HitSound = SoundID.NPCHit1;
             npc.DeathSound = SoundID.NPCDeath1;
             npc.value = 0f;

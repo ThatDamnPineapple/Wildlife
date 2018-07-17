@@ -9,13 +9,10 @@ namespace Wildlife.NPCs
 {
     public class Owl : ModNPC
     {
-		int state = 0;
-		int timer1 = 0;
-		int timer2 = 0;
         public override void SetStaticDefaults()
         {
             DisplayName.SetDefault("Owl");
-            Main.npcFrameCount[npc.type] = 11;
+            Main.npcFrameCount[npc.type] = 5;
         }
         public override void SetDefaults()
         {
@@ -31,15 +28,16 @@ namespace Wildlife.NPCs
             npc.DeathSound = SoundID.NPCDeath1;
             npc.value = 0f;
 			npc.noGravity = true;
-				aiType = 364;
-			npc.aiStyle = 68;
+			animationType = NPCID.Bird;
+			aiType = NPCID.Bird;  
+			npc.aiStyle = 24;
             npc.knockBackResist = .25f;
 			//banner = npc.type;
 			//bannerItem = mod.ItemType("SnakeBanner");
   
         }
 
-				public override float SpawnChance(NPCSpawnInfo spawnInfo)
+		public override float SpawnChance(NPCSpawnInfo spawnInfo)
         {
 			if (SpawnCondition.Cavern.Chance != 0)
 			{
@@ -47,56 +45,6 @@ namespace Wildlife.NPCs
 			}
             return !spawnInfo.invasion && !spawnInfo.sky && !Main.eclipse && !Main.dayTime ? 0.1f : 0f;
         }
-		
-        public override void FindFrame(int frameHeight)
-        {
-			if (state == 2)
-			{
-				timer1++;
-				if (timer1 % 4 == 0)
-				{
-					timer2++;
-				}
-				npc.frame.Y = (int)((timer2 % 2) + 1) * frameHeight;
-			}
-			if (state == 0)
-			{
-				timer1++;
-				if (timer1 % 6 == 0)
-				{
-					timer2++;
-				}
-				npc.frame.Y = (int)((timer2 % 8) + 3) * frameHeight;
-			}
-			if (state == 1)
-			{
-				npc.frame.Y = 0;
-			}
-			if (npc.velocity.X > 0)
-				{
-					npc.spriteDirection = 1;
-				}
-				else if (npc.velocity.X < 0)
-				{	
-					npc.spriteDirection = 0;
-				}
-        }
-        public override bool PreAI()
-		{
-			if (npc.velocity.Y < 0)
-			{
-				state = 2;
-			}
-			else if (npc.velocity.Y == 0)
-			{
-				state = 1;
-			}
-			else if (npc.velocity.Y > 0)
-			{
-				state = 0;
-			}
-			return true;
-		}
 		public override void HitEffect(int hitDirection, double damage)
         {
             if (npc.life <= 0)

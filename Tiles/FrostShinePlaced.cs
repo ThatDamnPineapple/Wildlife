@@ -9,7 +9,7 @@ using Terraria.ObjectData;
 
 namespace Wildlife.Tiles
 {
-    public class FrostShine : ModTile
+    public class FrostShinePlaced : ModTile
     {
         public override void SetDefaults()
         {
@@ -22,7 +22,6 @@ namespace Wildlife.Tiles
             Main.tileLighted[Type] = true;
             AddMapEntry(new Color(21, 134, 255));
 			dustType = 67;
-			Main.tileCut[Type] = true;
             TileObjectData.newTile.DrawYOffset = 2;
             TileObjectData.newTile.CoordinateHeights = new int[]
             {
@@ -54,12 +53,12 @@ namespace Wildlife.Tiles
             Item.NewItem(i * 16, j * 16, 48, 48, mod.ItemType("FrostShine"));
              
         }
-   		public override void ModifyLight(int i, int j, ref float r, ref float g, ref float b)
+ 		public override void ModifyLight(int i, int j, ref float r, ref float g, ref float b)
 		{
 			r = 0.0f;
 			g = 0.0f;
 			b = 0.7f;
-		}          
+		}      
 
     }
 }

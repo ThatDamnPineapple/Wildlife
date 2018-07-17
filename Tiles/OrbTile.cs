@@ -36,7 +36,14 @@ namespace Wildlife.Tiles
 		{
 			Item.NewItem(i * 16, j * 16, 16, 32, mod.ItemType("FairyStone"));
 		}
-
+		public override void NearbyEffects(int i, int j, bool closer)
+		{
+			if (closer)
+			{
+				Player player = Main.LocalPlayer;		
+				player.AddBuff(mod.BuffType("QuakeHurt"), 5);
+			}
+		}
 	}
 	
 }

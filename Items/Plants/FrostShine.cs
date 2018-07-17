@@ -28,7 +28,7 @@ namespace Wildlife.Items.Plants
 			item.useStyle = 1;
 			item.consumable = true;
 			item.value = 2500;
-			item.createTile = mod.TileType("FrostShine");
+			item.createTile = mod.TileType("FrostShinePlaced");
 		}
 		
         

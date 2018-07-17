@@ -14,7 +14,9 @@ namespace Wildlife.Buffs
 		{
 			Main.buffNoTimeDisplay[Type] = false;
 			DisplayName.SetDefault("Fairy Swarm");
-            Description.SetDefault("You are near a Fairy Orb");
+            Description.SetDefault("Fairies appear more often in the hallow");
+			Main.buffNoTimeDisplay[Type] = true;
+            canBeCleared = false;
 		}
 	}
 }

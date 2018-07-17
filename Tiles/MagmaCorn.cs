@@ -19,7 +19,7 @@ namespace Wildlife.Tiles
             Main.tileSolid[Type] = false;
             Main.tileMergeDirt[Type] = true;
             Main.tileBlockLight[Type] = true;
-            Main.tileLighted[Type] = false;
+            Main.tileLighted[Type] = true;
             AddMapEntry(new Color(170, 0, 0));
 			dustType = 12;
 			Main.tileCut[Type] = true;
@@ -34,13 +34,9 @@ namespace Wildlife.Tiles
         }
 		public override void ModifyLight(int i, int j, ref float r, ref float g, ref float b)
 		{
-			Tile tile = Main.tile[i, j];
-			if (tile.frameX < 66)
-			{
-				r = 1.25f;
-				g = 0.45f;
-				b = 0f;
-			}
+			r = 0.9f;
+			g = 0.0f;
+			b = 0.0f;
 		}
 		public override void PostDraw(int i, int j, SpriteBatch spriteBatch)
 		{

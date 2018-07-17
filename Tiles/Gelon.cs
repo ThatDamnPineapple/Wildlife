@@ -48,6 +48,12 @@ namespace Wildlife.Tiles
         {
             num = fail ? 1 : 3;
         }
+		public override void ModifyLight(int i, int j, ref float r, ref float g, ref float b)
+		{
+			r = 0.0f;
+			g = 0.05f;
+			b = 0.4f;
+		}
       public override void KillMultiTile(int i, int j, int frameX, int frameY)
         {
             Main.PlaySound(4, i * 16, j * 16, 1);		

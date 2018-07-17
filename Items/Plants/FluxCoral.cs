@@ -28,7 +28,7 @@ namespace Wildlife.Items.Plants
 			item.useStyle = 1;
 			item.consumable = true;
 			item.value = 5000;
-			item.createTile = mod.TileType("FluxCoral");
+			item.createTile = mod.TileType("FluxCoralPlaced");
 		}
 		
         

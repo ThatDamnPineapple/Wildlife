@@ -26,7 +26,16 @@ namespace Wildlife.Items.Drops
         public override void SetStaticDefaults()
         {
         DisplayName.SetDefault("Heavenly Crystal");
-        Tooltip.SetDefault("Increases the spawn rates of fairies when placed");
+        Tooltip.SetDefault("Increases the spawn rates of fairies when placed in the hallow \nIf not placed in the hallow, the buff will do nothing");
+        }
+        public override void AddRecipes()
+        {
+			ModRecipe recipe = new ModRecipe(mod);
+			recipe.AddIngredient(ItemID.HallowedBar, 2);
+			recipe.AddIngredient(ItemID.CrystalShard, 10);
+			recipe.AddTile(TileID.MythrilAnvil);
+			recipe.SetResult(this);
+            recipe.AddRecipe();
         }
     }
 }

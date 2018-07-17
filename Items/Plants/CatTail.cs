@@ -28,7 +28,7 @@ namespace Wildlife.Items.Plants
 			item.useStyle = 1;
 			item.consumable = true;
 			item.value = 500;
-			item.createTile = mod.TileType("CatTail");
+			item.createTile = mod.TileType("CatTailPlaced");
 		}
 		
         
