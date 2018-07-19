@@ -35,7 +35,6 @@ namespace Wildlife.Items.Animals
         {
             NPC.NewNPC((int)player.Center.X, (int)player.Center.Y, mod.NPCType("BlueFairy"));
             return true;
-        }
-        
+        }      
 	}
 }

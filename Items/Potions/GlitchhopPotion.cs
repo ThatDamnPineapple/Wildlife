@@ -12,7 +12,7 @@ namespace Wildlife.Items.Potions
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Glitchhop Potion");
+			DisplayName.SetDefault("Glitchhop Vial");
            Tooltip.SetDefault("Teleports you to a nearby area");
 
         }
