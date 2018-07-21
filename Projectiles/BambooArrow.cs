@@ -22,6 +22,10 @@ namespace Wildlife.Projectiles
 		
 		public override void Kill(int timeLeft)
 		{
+			if (Main.rand.Next(4) == 0)
+			{
+				Item.NewItem((int)projectile.position.X, (int)projectile.position.Y, projectile.width, projectile.height, mod.ItemType("BambooArrow"));
+			}
 			for (int i = 0; i < 5; i++)
 			{
 				int dust = Dust.NewDust(projectile.position, projectile.width, projectile.height, 0);

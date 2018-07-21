@@ -8,7 +8,7 @@ using Terraria.ModLoader;
 
 namespace Wildlife.Projectiles
 {
-    class BambooSpear : ModProjectile
+    class BambooKnife : ModProjectile
 	{
         public override void SetStaticDefaults()
         {
@@ -16,15 +16,15 @@ namespace Wildlife.Projectiles
         }
         public override void SetDefaults()
 		{
-			projectile.CloneDefaults(ProjectileID.WoodenArrowFriendly);
-			projectile.penetrate = 2;
+			projectile.CloneDefaults(ProjectileID.ThrowingKnife);
+			projectile.penetrate = 1;
 		}
 		
 		public override void Kill(int timeLeft)
 		{
-			if (Main.rand.Next(4) == 0)
+			if (Main.rand.Next(2) == 0)
 			{
-				Item.NewItem((int)projectile.position.X, (int)projectile.position.Y, projectile.width, projectile.height, mod.ItemType("BambooSpear"));
+				Item.NewItem((int)projectile.position.X, (int)projectile.position.Y, projectile.width, projectile.height, mod.ItemType("BambooKnife"));
 			}
 			for (int i = 0; i < 5; i++)
 			{

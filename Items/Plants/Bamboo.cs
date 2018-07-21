@@ -12,15 +12,13 @@ namespace Wildlife.Items.Plants
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Bamboo");
-            
-
+			DisplayName.SetDefault("Bamboo");          
         }
 		public override void SetDefaults()
 		{
 			item.width = 26;
 			item.height = 22;
-			item.maxStack = 99;
+			item.maxStack = 999;
 			item.useTurn = true;
 			item.autoReuse = true;
 			item.useAnimation = 15;
