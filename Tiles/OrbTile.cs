@@ -6,6 +6,8 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.ObjectData;
 using Terraria.GameContent.Events;
+using System;
+using System.Collections.Generic;
 
 namespace Wildlife.Tiles
 {
@@ -38,7 +40,7 @@ namespace Wildlife.Tiles
 		}
 		public override void NearbyEffects(int i, int j, bool closer)
 		{
-			if (closer)
+			if (closer && !Main.LocalPlayer.dead)
 			{
 				Player player = Main.LocalPlayer;		
 				player.AddBuff(mod.BuffType("QuakeHurt"), 5);
