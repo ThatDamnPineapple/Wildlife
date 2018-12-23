@@ -14,55 +14,43 @@ using Terraria.GameContent.Events;
 
 namespace Wildlife.NPCs
 {
-    public class PinkFairy : ModNPC
+    public class GraniteOrb : ModNPC
     {
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Fairy");
-			Main.npcFrameCount[npc.type] = 2;
+            DisplayName.SetDefault("Supercharged Orb");
+			Main.npcFrameCount[npc.type] = 1;
         }
         public override void SetDefaults()
         {
-            npc.width = 16;
-            npc.height = 12;
+            npc.width = 8;
+            npc.height = 8;
             npc.damage = 0;
 			npc.chaseable = false;
             npc.defense = 0;
             npc.lifeMax = 5;
 			Main.npcCatchable[npc.type] = true;
-            npc.catchItem = (short)mod.ItemType("FairyP");
-            npc.HitSound = SoundID.NPCHit1;
-            npc.DeathSound = SoundID.NPCDeath1;
+            npc.catchItem = (short)mod.ItemType("GraniteOrb");
+            npc.HitSound = SoundID.NPCHit53;
+            npc.DeathSound = SoundID.NPCDeath56;
             npc.value = 0f;
 			npc.aiStyle = 64;
-			aiType = 358;
-			npc.noGravity = true;
+				aiType = 358;
+				npc.noGravity = true;
             npc.knockBackResist = .25f;
   
         }
-
-		public override float SpawnChance(NPCSpawnInfo spawnInfo)
-        {			
-            return !spawnInfo.invasion && !spawnInfo.sky && !Main.eclipse && spawnInfo.player.ZoneHoly && !Main.dayTime ? 0.03f : 0f;
+    	public override float SpawnChance(NPCSpawnInfo spawnInfo)
+		{
 			int x = spawnInfo.spawnTileX;
 			int y = spawnInfo.spawnTileY;
 			int tile = (int)Main.tile[x, y].type;
-			return !spawnInfo.invasion && !spawnInfo.sky && !Main.eclipse && spawnInfo.player.ZoneHoly && !Main.dayTime && (tile == mod.TileType("OrbTile")) ? 0.13f : 0f;
-		}
-		public override void FindFrame(int frameHeight)
-        {
-			
-				npc.frameCounter += 0.17f;
-			npc.frameCounter %= (double)2;
-			int num = (int)npc.frameCounter;
-			npc.frame.Y = num * frameHeight;
-		//	npc.spriteDirection = npc.direction;
-			
+            return (tile == 368) && !spawnInfo.invasion && !spawnInfo.sky && !Main.eclipse ? 0.05f : 0f;
         }
 		
         public override void AI()
 		{
-			Vector3 RGB = new Vector3(2.5f, 1.5f, 2f);
+			Vector3 RGB = new Vector3(0f, 1.5f, 2.5f);
 			npc.TargetClosest();
 			float multiplier = 0.75f;
 			float max = 2.25f;

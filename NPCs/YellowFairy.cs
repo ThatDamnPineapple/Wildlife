@@ -1,13 +1,20 @@
-using Terraria;
 using System;
-using Terraria.ID;
-using System.Diagnostics;
+using System.Collections.Generic;
+using System.IO;
 using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Graphics;
+using Terraria.ModLoader.IO;
+using Terraria.DataStructures;
+using Terraria.GameInput;
+using Terraria.ID;
 using Terraria.ModLoader;
+using Terraria.Localization;
+using Terraria;
+using Terraria.GameContent.Events;
 
 namespace Wildlife.NPCs
 {
-    public class GreenFairy : ModNPC
+    public class YellowFairy : ModNPC
     {
         public override void SetStaticDefaults()
         {
@@ -23,16 +30,17 @@ namespace Wildlife.NPCs
             npc.defense = 0;
             npc.lifeMax = 5;
 			Main.npcCatchable[npc.type] = true;
-            npc.catchItem = (short)mod.ItemType("FairyG");
+            npc.catchItem = (short)mod.ItemType("FairyY");
             npc.HitSound = SoundID.NPCHit1;
             npc.DeathSound = SoundID.NPCDeath1;
             npc.value = 0f;
 			npc.aiStyle = 64;
-				aiType = 358;
-				npc.noGravity = true;
+			aiType = 358;
+			npc.noGravity = true;
             npc.knockBackResist = .25f;
   
         }
+
 		public override float SpawnChance(NPCSpawnInfo spawnInfo)
         {			
             return !spawnInfo.invasion && !spawnInfo.sky && !Main.eclipse && spawnInfo.player.ZoneHoly && !Main.dayTime ? 0.03f : 0f;
@@ -54,7 +62,7 @@ namespace Wildlife.NPCs
 		
         public override void AI()
 		{
-			Vector3 RGB = new Vector3(0f, 1f, 0.3f);
+			Vector3 RGB = new Vector3(2.5f, 2.5f, 0f);
 			npc.TargetClosest();
 			float multiplier = 0.75f;
 			float max = 2.25f;
