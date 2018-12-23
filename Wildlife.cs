@@ -16,7 +16,7 @@ namespace Wildlife
 		}
 		 public override void AddRecipes()
         {
-            ModRecipe recipe = new ModRecipe(this); //wormhole
+            ModRecipe recipe = new ModRecipe(this); //Wormhole
 			recipe.AddIngredient(ItemID.BottledWater, 1);
             recipe.AddIngredient(null, "FluxCoral", 1);
 			recipe.AddIngredient(3191, 1);
@@ -25,7 +25,7 @@ namespace Wildlife
             recipe.AddRecipe();
 			
 			
-            ModRecipe recipe2 = new ModRecipe(this); //calming
+            ModRecipe recipe2 = new ModRecipe(this); //Calming
 			recipe2.AddIngredient(ItemID.BottledWater, 1);
             recipe2.AddIngredient(null, "CatTail", 1);
 			recipe2.AddIngredient(313, 1);
@@ -33,7 +33,7 @@ namespace Wildlife
             recipe2.SetResult(2324);
             recipe2.AddRecipe();
 			
-			ModRecipe recipe3 = new ModRecipe(this); //teleporation
+			ModRecipe recipe3 = new ModRecipe(this); //Teleporation
 			recipe3.AddIngredient(ItemID.BottledWater, 1);
             recipe3.AddIngredient(null, "FluxCoral", 1);
 			recipe3.AddIngredient(2317, 1);
@@ -41,7 +41,7 @@ namespace Wildlife
             recipe3.SetResult(2351);
             recipe3.AddRecipe();
 			
-			ModRecipe recipe4 = new ModRecipe(this); //archery
+			ModRecipe recipe4 = new ModRecipe(this); //Archery
 			recipe4.AddIngredient(ItemID.BottledWater, 1);
             recipe4.AddIngredient(null, "CatTail", 1);
 			recipe4.AddIngredient(null, "Bamboo", 1);
@@ -57,7 +57,7 @@ namespace Wildlife
             recipe5.SetResult(28, 5);
             recipe5.AddRecipe();
 			
-			ModRecipe recipe6 = new ModRecipe(this); //hunting
+			ModRecipe recipe6 = new ModRecipe(this); //Hunting
 			recipe6.AddIngredient(ItemID.BottledWater, 1);
             recipe6.AddIngredient(null, "Jaderose", 1);
 			recipe6.AddIngredient(315, 1);
@@ -65,7 +65,7 @@ namespace Wildlife
             recipe6.SetResult(304);
             recipe6.AddRecipe();
 			
-			ModRecipe recipe7 = new ModRecipe(this); //warmth
+			ModRecipe recipe7 = new ModRecipe(this); //Warmth
 			recipe7.AddIngredient(ItemID.BottledWater, 1);
             recipe7.AddIngredient(null, "FrostShine", 1);
 			recipe7.AddIngredient(2358, 1);
@@ -73,7 +73,7 @@ namespace Wildlife
             recipe7.SetResult(2359);
             recipe7.AddRecipe();
 			
-			ModRecipe recipe8 = new ModRecipe(this); //gills
+			ModRecipe recipe8 = new ModRecipe(this); //Gills
 			recipe8.AddIngredient(ItemID.BottledWater, 1);
             recipe8.AddIngredient(null, "FrostShine", 1);
 			recipe8.AddIngredient(null, "CatTail", 1);
@@ -81,7 +81,7 @@ namespace Wildlife
             recipe8.SetResult(291);
             recipe8.AddRecipe();
 			
-			ModRecipe recipe9 = new ModRecipe(this); //gills
+			ModRecipe recipe9 = new ModRecipe(this); //Gills
 			recipe9.AddIngredient(ItemID.BottledWater, 1);
             recipe9.AddIngredient(null, "Bamboo", 1);
 			recipe9.AddIngredient(null, "Jaderose", 1);
@@ -89,7 +89,7 @@ namespace Wildlife
             recipe9.SetResult(291);
             recipe9.AddRecipe();
 			
-			ModRecipe recipe10 = new ModRecipe(this); //ObsSkin
+			ModRecipe recipe10 = new ModRecipe(this); //Obsidian Skin
 			recipe10.AddIngredient(ItemID.BottledWater, 1);
             recipe10.AddIngredient(null, "MagmaCorn", 1);
 			recipe10.AddIngredient(173, 1);
@@ -108,7 +108,7 @@ namespace Wildlife
             recipe11.SetResult(2348);
             recipe11.AddRecipe();			
 			
-			ModRecipe recipe12 = new ModRecipe(this); //grav
+			ModRecipe recipe12 = new ModRecipe(this); //Gravity
 			recipe12.AddIngredient(ItemID.BottledWater, 1);
             recipe12.AddIngredient(null, "MagmaCorn", 2);
             recipe12.AddIngredient(null, "FluxCoral", 2);
@@ -117,6 +117,29 @@ namespace Wildlife
             recipe12.AddTile(TileID.Bottles);
             recipe12.SetResult(305);
             recipe12.AddRecipe();
+			
+			ModRecipe recipe13 = new ModRecipe(this); //Battle
+			recipe13.AddIngredient(ItemID.BottledWater, 1);
+			recipe13.AddIngredient(2303, 1);
+            recipe13.AddIngredient(null, "VenomRadish", 1);
+            recipe13.AddTile(TileID.Bottles);
+            recipe13.SetResult(300);
+            recipe13.AddRecipe();
+			
+			ModRecipe recipe14 = new ModRecipe(this); //Stink
+			recipe14.AddIngredient(ItemID.BottledWater, 1);
+            recipe14.AddIngredient(null, "CatTail", 1);
+            recipe14.AddIngredient(null, "VenomRadish", 1);
+            recipe14.AddTile(TileID.Bottles);
+            recipe14.SetResult(2353);
+            recipe14.AddRecipe();
+			
+			ModRecipe recipe15 = new ModRecipe(this); //Venom Vial
+			recipe15.AddIngredient(2607, 3);
+            recipe15.AddIngredient(null, "VenomRadish", 1);
+            recipe15.AddTile(TileID.Bottles);
+            recipe15.SetResult(1339);
+            recipe15.AddRecipe();
         }
 	}
 }

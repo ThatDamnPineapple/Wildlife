@@ -164,7 +164,7 @@ namespace Wildlife.Tiles
                         }            
                 
             }
-			}
+/*			}
 			
 			if (type == 396)
 			{
@@ -176,10 +176,10 @@ namespace Wildlife.Tiles
                             NetMessage.SendObjectPlacment(-1,i-1,j-1,mod.TileType("JungleFungus"),0,0,-1,-1);
                         }            
                 
-            }
+            } */ 
 			}
 			
-			if (type == 396)
+			if (type == 60 && Main.hardMode)
 			{
             if(TileArray2.Contains(Framing.GetTileSafely(i,j-1).type) &&TileArray2.Contains(Framing.GetTileSafely(i,j-2).type))
             {
