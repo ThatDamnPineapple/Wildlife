@@ -27,7 +27,7 @@ namespace Wildlife.Items.Drops
             item.consumable = true;
             item.value = 3500;
             item.rare = 5;
-            item.buffType = mod.BuffType("YellowFairyBuff");
+            item.buffType = mod.BuffType("YellowFairy");
             item.buffTime = 15000;
 		}
 		public override void AddRecipes()

@@ -183,7 +183,7 @@ namespace Wildlife.Tiles
 			{
             if(TileArray2.Contains(Framing.GetTileSafely(i,j-1).type) &&TileArray2.Contains(Framing.GetTileSafely(i,j-2).type))
             {
-                        if(Main.rand.Next(6500)==0)
+                        if(Main.rand.Next(2500)==0)
                         {
                             WorldGen.PlaceObject(i-1,j-1,mod.TileType("VenomRadish"));
                             NetMessage.SendObjectPlacment(-1,i-1,j-1,mod.TileType("VenomRadish"),0,0,-1,-1);

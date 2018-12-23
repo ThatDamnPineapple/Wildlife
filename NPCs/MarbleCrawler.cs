@@ -28,7 +28,7 @@ namespace Wildlife.NPCs
             npc.defense = 0;
             npc.lifeMax = 5;
 			Main.npcCatchable[npc.type] = true;
-            npc.catchItem = (short)mod.ItemType("Cattail");
+            npc.catchItem = (short)mod.ItemType("MarbleCrawler");
             npc.HitSound = SoundID.NPCHit29;
             npc.DeathSound = SoundID.NPCDeath31;
             npc.value = 0f;
@@ -43,7 +43,7 @@ namespace Wildlife.NPCs
 			int x = spawnInfo.spawnTileX;
 			int y = spawnInfo.spawnTileY;
 			int tile = (int)Main.tile[x, y].type;
-            return (tile == 367) && !spawnInfo.invasion && !spawnInfo.sky && !Main.eclipse ? 0.05f : 0f;
+            return (tile == 367) && !spawnInfo.invasion && !spawnInfo.sky && !Main.eclipse ? 0.09f : 0f;
 		}
 		public override void HitEffect(int hitDirection, double damage)
         {
