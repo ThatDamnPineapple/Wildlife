@@ -204,7 +204,34 @@ namespace Wildlife.Tiles
                             NetMessage.SendObjectPlacment(-1,i-1,j-1,mod.TileType("ForestPlant"),0,0,-1,-1);
                         }                          
             }
-			}	
+			}
+			
+			if (type == 1) //add water support later
+			{
+				bool place = false;
+				for (int x = i - 5; x < i + 5; x++)
+				{
+					for (int y = j; y < j + 5; y++)
+					{
+						if (Main.tile[x, y].liquid == 255)
+						{
+							place = true;
+						}
+					}
+				}
+			
+			 if(TileArray2.Contains(Framing.GetTileSafely(i,j-1).type) &&TileArray2.Contains(Framing.GetTileSafely(i,j-2).type) && place)
+            {
+                        if(Main.rand.Next(4000) ==1)
+                        {
+                            WorldGen.PlaceObject(i-1,j-1,mod.TileType("StoneberryPlant"));
+                            NetMessage.SendObjectPlacment(-1,i-1,j-1,mod.TileType("StoneberryPlant"),0,0,-1,-1);
+						
+							
+                        } 
+			}						
+                
+            }
         }
 	}
 }
