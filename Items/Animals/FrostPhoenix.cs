@@ -14,11 +14,11 @@ using System;
 
 namespace Wildlife.Items.Animals
 {
-	public class FairyP : ModItem
+	public class FrostPhoenix : ModItem
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Pink Fairy");
+			DisplayName.SetDefault("Frost Phoenix");
             
 
         }
@@ -33,13 +33,13 @@ namespace Wildlife.Items.Animals
 			item.noMelee = true;
 			item.useTime = 10;
 			item.useStyle = 1;
-			item.consumable = true;
 			item.noUseGraphic = true;
-			item.value = 4000;
+			item.consumable = true;
+			item.value = 1000;
 		}
 		  public override bool UseItem(Player player)
         {
-            NPC.NewNPC((int)player.Center.X, (int)player.Center.Y, mod.NPCType("PinkFairy"));
+            NPC.NewNPC((int)player.Center.X, (int)player.Center.Y, mod.NPCType("FrostPhoenix"));
             return true;
         }
 		public override void PostDrawInWorld(SpriteBatch spriteBatch, Color lightColor, Color alphaColor, float rotation, float  scale, int whoAmI) 	
@@ -48,7 +48,7 @@ namespace Wildlife.Items.Animals
 			texture = Main.itemTexture[item.type];
 			spriteBatch.Draw
 			(
-				mod.GetTexture("Items/Animals/FairyP"),
+				mod.GetTexture("Items/Animals/FrostPhoenix"),
 				new Vector2
 				(
 					item.position.X - Main.screenPosition.X + item.width * 0.5f,
@@ -62,6 +62,6 @@ namespace Wildlife.Items.Animals
 				SpriteEffects.None, 
 				0f
 			);
-		}	        
+		}	       
 	}
 }

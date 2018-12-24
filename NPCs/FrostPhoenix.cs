@@ -11,7 +11,7 @@ namespace Wildlife.NPCs
     {
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("FrostPhoenix");
+            DisplayName.SetDefault("Frost Phoenix");
             Main.npcFrameCount[npc.type] = 5;
         }
         public override void SetDefaults()
@@ -39,20 +39,22 @@ namespace Wildlife.NPCs
 
 		public override float SpawnChance(NPCSpawnInfo spawnInfo)
         {
-			if (SpawnCondition.Cavern.Chance != 0)
-			{
-				return 0.0f;
-			}
             return !spawnInfo.invasion && !spawnInfo.sky && !Main.eclipse && spawnInfo.player.ZoneSnow ? 0.05f : 0f;
         }
 		public override void HitEffect(int hitDirection, double damage)
         {
             if (npc.life <= 0)
             {
-			NPC.NewNPC((int)(npc.position.X), (int)(npc.position.Y), (mod.NPCType("FrostPhoenix")));
-			Dust.NewDust(npc.position, npc.width, npc.height, 113);
-			Dust.NewDust(npc.position, npc.width, npc.height, 113);
-			Dust.NewDust(npc.position, npc.width, npc.height, 113);
+                if (Main.rand.Next(4) == 0)
+                {
+			    NPC.NewNPC((int)(npc.position.X), (int)(npc.position.Y), (mod.NPCType("FrostPhoenix")));
+			    NPC.NewNPC((int)(npc.position.X), (int)(npc.position.Y), (mod.NPCType("FrostPhoenix")));
+				Main.PlaySound(SoundID.Item4, npc.position);
+			    Dust.NewDust(npc.position, npc.width, npc.height, 113);
+			    Dust.NewDust(npc.position, npc.width, npc.height, 113);
+			    Dust.NewDust(npc.position, npc.width, npc.height, 113);
+			    Dust.NewDust(npc.position, npc.width, npc.height, 113);
+                }
 			Dust.NewDust(npc.position, npc.width, npc.height, 113);
             }
         }

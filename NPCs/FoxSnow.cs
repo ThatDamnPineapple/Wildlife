@@ -7,7 +7,7 @@ using Terraria.ModLoader;
 
 namespace Wildlife.NPCs
 {
-    public class Fox : ModNPC
+    public class FoxSnow : ModNPC
     {
 		//npc.ai[0] = 0;
 		bool walk = false;
