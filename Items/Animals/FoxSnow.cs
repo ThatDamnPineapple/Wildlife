@@ -8,11 +8,11 @@ using System.Collections.Generic;
 
 namespace Wildlife.Items.Animals
 {
-	public class MarbleCrawler : ModItem
+	public class FoxSnow : ModItem
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Gilded Crawler");
+			DisplayName.SetDefault("Arctic Fox");
             
 
         }
@@ -27,14 +27,13 @@ namespace Wildlife.Items.Animals
 			item.noMelee = true;
 			item.useTime = 10;
 			item.useStyle = 1;
-			item.bait = 25;
-			item.noUseGraphic = true;
 			item.consumable = true;
+			item.noUseGraphic = true;
 			item.value = 500;
 		}
 		  public override bool UseItem(Player player)
         {
-            NPC.NewNPC((int)player.Center.X, (int)player.Center.Y, mod.NPCType("MarbleCrawler"));
+            NPC.NewNPC((int)player.Center.X, (int)player.Center.Y, mod.NPCType("FoxSnow"));
             return true;
         }
         

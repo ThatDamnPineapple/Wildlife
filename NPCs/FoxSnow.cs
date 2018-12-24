@@ -7,7 +7,7 @@ using Terraria.ModLoader;
 
 namespace Wildlife.NPCs
 {
-    public class MarbleCrawler : ModNPC
+    public class Fox : ModNPC
     {
 		//npc.ai[0] = 0;
 		bool walk = false;
@@ -16,43 +16,45 @@ namespace Wildlife.NPCs
 		bool jump = false;
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Gilded Crawler");
+            DisplayName.SetDefault("Arctic Fox");
             Main.npcFrameCount[npc.type] = 3;
         }
         public override void SetDefaults()
         {
-            npc.width = 20;
-            npc.height = 24;
+            npc.width = 42;
+            npc.height = 28;
             npc.damage = 0;
 			npc.chaseable = false;
             npc.defense = 0;
             npc.lifeMax = 5;
 			Main.npcCatchable[npc.type] = true;
-            npc.catchItem = (short)mod.ItemType("MarbleCrawler");
-            npc.HitSound = SoundID.NPCHit29;
-            npc.DeathSound = SoundID.NPCDeath31;
+            npc.catchItem = (short)mod.ItemType("FoxSnow");
+            npc.HitSound = SoundID.NPCHit1;
+            npc.DeathSound = SoundID.NPCDeath1;
             npc.value = 0f;
             npc.knockBackResist = .25f;
+			banner = npc.type;
+			bannerItem = mod.ItemType("FoxBanner");
 			npc.aiStyle = 7;
 			aiType = NPCID.Bunny;  
 			animationType = NPCID.Zombie;
         }
 
-    	public override float SpawnChance(NPCSpawnInfo spawnInfo)
-		{
-			int x = spawnInfo.spawnTileX;
-			int y = spawnInfo.spawnTileY;
-			int tile = (int)Main.tile[x, y].type;
-            return (tile == 367) && !spawnInfo.invasion && !spawnInfo.sky && !Main.eclipse ? 0.09f : 0f;
+				public override float SpawnChance(NPCSpawnInfo spawnInfo)
+        {
+			if (SpawnCondition.Cavern.Chance != 0)
+			{
+				return 0.0f;
+			}
+            return spawnInfo.spawnTileY < Main.rockLayer && !spawnInfo.invasion && !spawnInfo.sky && !Main.eclipse && spawnInfo.player.ZoneSnow ? 0.08f : 0f;
 		}
 		public override void HitEffect(int hitDirection, double damage)
         {
             if (npc.life <= 0)
             {
-                Gore.NewGore(npc.position, npc.velocity, mod.GetGoreSlot("Gores/MarbleCrawler/MarbleCrawlerGore"), 1f);
+                Gore.NewGore(npc.position, npc.velocity, mod.GetGoreSlot("Gores/Fox/FoxGore_4"), 1f);
+                 Gore.NewGore(npc.position, npc.velocity, mod.GetGoreSlot("Gores/Fox/FoxGore_5"), 1f);
             }
         }
     }
 }
-
-

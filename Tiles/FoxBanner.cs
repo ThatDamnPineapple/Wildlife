@@ -37,7 +37,7 @@ namespace Wildlife.Tiles
 			if (closer)
 			{
 				Player player = Main.LocalPlayer;
-				
+				player.NPCBannerBuff[mod.NPCType("FoxSnow")] = true;			
 				player.NPCBannerBuff[mod.NPCType("Fox")] = true;
 				player.hasBanner = true;
 			}
