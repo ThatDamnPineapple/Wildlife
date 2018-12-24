@@ -5,6 +5,13 @@ Forum post is severely outdated, refer to the discord linked to it if you have q
 
 Latest Update:
 
+Yellow Fairy- Spawns like the others, its bottled farm grants slightly increased defense
+Living Wood Mite- Spawns in living wood trees, used for bait
+Gilded Crawler and Supercharged Orb- One crawls, one floats and glows, found in granite and marble biomes, these two will be polished more soon
+Arctic Fox- A chilly recolor of the normal fox for snow biomes
+Frost Phoenix- Spawns all around the frost biome, even underground, for some reason it likes to follow you, it may split into two upon death
+Glowmasks for more items and grammatical fixes.
+
 Venom Radish- Grows on jungle grass in hardmode, careful not to use 'quick buff' with this in your inventory or you'll be envenomed.
 You can use the venom radish for stink and battle potions, as well as pre-plantera venom vials using spider legs.
 Pink Marshmallow- Add a strawberry to a cooked marshmallow, extends the effects of the strawberry.
