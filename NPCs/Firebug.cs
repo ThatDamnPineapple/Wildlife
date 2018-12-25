@@ -28,8 +28,8 @@ namespace Wildlife.NPCs
             npc.DeathSound = SoundID.NPCDeath1;
             npc.value = 0f;
 			npc.aiStyle = 64;
-				aiType = 358;
-				npc.noGravity = true;
+			aiType = 358;
+			npc.noGravity = true;
             npc.knockBackResist = .50f;
 			 npc.lavaImmune = true;
   

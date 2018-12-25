@@ -12,7 +12,7 @@ namespace Wildlife.NPCs
         public override void SetStaticDefaults()
         {
             DisplayName.SetDefault("Jadefish");
-			Main.npcFrameCount[npc.type] = 2;
+			Main.npcFrameCount[npc.type] = 6;
         }
         public override void SetDefaults()
         {
@@ -41,18 +41,15 @@ namespace Wildlife.NPCs
 						Dust.NewDust (npc.position, npc.width, npc.height, 43, Main.rand.Next(-1,2), Main.rand.Next(-1,2), 0);
 					}
 			return true;
-		} /*
+		} 
 			public override float SpawnChance(NPCSpawnInfo spawnInfo)
         {
             if (spawnInfo.playerSafe)
             {
                 return 0f;
             }
-			int x = spawnInfo.spawnTileX;
-			int y = spawnInfo.spawnTileY;
-			int tile = (int)Main.tile[x, y].type;
-            return (tile == 1) && SpawnCondition.Cavern.Chance * 0.03f;
-        } */
+            return spawnInfo.water && spawnInfo.player.ZoneRockLayerHeight ?  0.03f : 0f;
+        } 
 		public override void FindFrame(int frameHeight)
         {
 			
