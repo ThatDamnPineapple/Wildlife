@@ -30,7 +30,7 @@ namespace Wildlife.NPCs
 			npc.HitSound = SoundID.NPCHit41;
 			npc.DeathSound = SoundID.NPCHit41;
             npc.value = 0f;
-            npc.knockBackResist = .25f;
+            npc.knockBackResist = 1f;
 		//	banner = npc.type;
 		//	bannerItem = mod.ItemType("DolphinBanner");
   
@@ -90,9 +90,9 @@ namespace Wildlife.NPCs
         {
             if (npc.life <= 0)
             {
-                Gore.NewGore(npc.position, npc.velocity, mod.GetGoreSlot("Gores/Oyster1"), 1f);
-                 Gore.NewGore(npc.position, npc.velocity, mod.GetGoreSlot("Gores/Oyster2"), 1f);
-				  Gore.NewGore(npc.position, npc.velocity, mod.GetGoreSlot("Gores/Oyster3"), 1f);
+                Gore.NewGore(npc.position, npc.velocity, mod.GetGoreSlot("Gores/Oyster/Oyster1"), 1f);
+                 Gore.NewGore(npc.position, npc.velocity, mod.GetGoreSlot("Gores/Oyster/Oyster2"), 1f);
+				  Gore.NewGore(npc.position, npc.velocity, mod.GetGoreSlot("Gores/Oyster/Oyster3"), 1f);
             }
         }
     }

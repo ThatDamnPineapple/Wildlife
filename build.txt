@@ -1,5 +1,5 @@
 author = 5, Graydee
-version = 0.10.0
+version = 0.10.1
 displayName = Wildlife Mod
 homepage = https://forums.terraria.org/index.php?threads/wildlife-mod.60215/
 buildIgnore = .gitignore, *.sln, *.csproj, *.user, obj\*, bin\*, .vs\*, Properties\*, .git\*

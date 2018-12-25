@@ -4,6 +4,11 @@ The theme of content varies massively, from bamboo on the outskirts of your worl
 Forum post is severely outdated, refer to the discord linked to it if you have questions.
 
 Latest Update:
+Stoneberries- grow near water on stone, they increase health but lower damage, these will be reconsidered/revamped quite shortly, give some ideas on the discord server
+Overgrown Living Wood Mite- Spawns in living mahoganys, used for bait
+Scorching Phoenix- Like the frost phoenix, but spawns in hell
+Oyster Gore Fixed
+Flying Coin is now the correct size
 
 Yellow Fairy- Spawns like the others, its bottled farm grants slightly increased defense
 Living Wood Mite- Spawns in living wood trees, used for bait
