@@ -63,10 +63,8 @@ namespace Wildlife.NPCs
         {
             if (npc.life <= 0)
             {
-                Gore.NewGore(npc.position, npc.velocity, mod.GetGoreSlot("Gores/Coin/Coin_1"), 1f);
-                 Gore.NewGore(npc.position, npc.velocity, mod.GetGoreSlot("Gores/Coin/Coin_2"), 1f);
-				  Gore.NewGore(npc.position, npc.velocity, mod.GetGoreSlot("Gores/Coin/Coin_3"), 1f);
-				   Gore.NewGore(npc.position, npc.velocity, mod.GetGoreSlot("Gores/Coin/Coin_4"), 1f);
+                Gore.NewGore(npc.position, npc.velocity, mod.GetGoreSlot("Gores/Jadefish/JadefishGore"), 1f);
+                Gore.NewGore(npc.position, npc.velocity, mod.GetGoreSlot("Gores/Jadefish/JadefishGoreTwo"), 1f);
             }
         }
     }

@@ -29,8 +29,8 @@ namespace Wildlife.NPCs
             npc.lifeMax = 5;
 			Main.npcCatchable[npc.type] = true;
             npc.catchItem = (short)mod.ItemType("MarbleCrawler");
-            npc.HitSound = SoundID.NPCHit29;
-            npc.DeathSound = SoundID.NPCDeath31;
+            npc.HitSound = SoundID.NPCHit1;
+            npc.DeathSound = SoundID.NPCDeath1;
             npc.value = 0f;
             npc.knockBackResist = .25f;
 			npc.aiStyle = 7;
