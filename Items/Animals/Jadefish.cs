@@ -13,7 +13,7 @@ namespace Wildlife.Items.Animals
 		public override void SetStaticDefaults()
 		{
 			DisplayName.SetDefault("Jadefish");
-            
+            Tooltip.SetDefault("'This shiny fish ate the plants it could find in the caverns, perhaps it kept a few preserved'");           
 
         }
 		public override void SetDefaults()
@@ -35,7 +35,6 @@ namespace Wildlife.Items.Animals
         {
             NPC.NewNPC((int)player.Center.X, (int)player.Center.Y, mod.NPCType("Jadefish"));
             return true;
-        }
-        
+		}
 	}
 }

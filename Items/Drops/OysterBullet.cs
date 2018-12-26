@@ -38,9 +38,9 @@ public class OysterBullet : ModItem
         {
             ModRecipe recipe = new ModRecipe(mod);
             recipe.AddIngredient(null, "OysterPearl", 1);
-			recipe.AddIngredient(97, 333);
+			recipe.AddIngredient(97, 99);
             recipe.AddTile(18);
-            recipe.SetResult(this, 333);
+            recipe.SetResult(this, 99);
             recipe.AddRecipe();
         }
     }
