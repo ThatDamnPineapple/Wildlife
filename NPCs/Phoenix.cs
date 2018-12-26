@@ -60,7 +60,7 @@ namespace Wildlife.NPCs
         }
         public override void AI()
 		{
-			Vector3 RGB = new Vector3(0.25f, 0.15f, 0.10f);
+			Vector3 RGB = new Vector3(2.5f, 1.5f, 1.0f);
 			float multiplier = 0.75f;
 			float max = 2.25f;
 			float min = 1.0f;

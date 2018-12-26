@@ -18,7 +18,7 @@ namespace Wildlife.Items.Animals
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Phoenix");
+			DisplayName.SetDefault("Scorching Phoenix");
             
 
         }
@@ -35,7 +35,7 @@ namespace Wildlife.Items.Animals
 			item.useStyle = 1;
 			item.noUseGraphic = true;
 			item.consumable = true;
-			item.value = 10000;
+			item.value = 100000;
 		}
 		  public override bool UseItem(Player player)
         {
