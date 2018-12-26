@@ -61,7 +61,6 @@ namespace Wildlife.NPCs
         public override void AI()
 		{
 			Vector3 RGB = new Vector3(0f, 0.15f, 0.25f);
-			npc.TargetClosest();
 			float multiplier = 0.75f;
 			float max = 2.25f;
 			float min = 1.0f;

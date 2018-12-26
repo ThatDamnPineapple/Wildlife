@@ -39,6 +39,7 @@ namespace Wildlife.Items.Drops
         {
 			ModRecipe recipe = new ModRecipe(mod);
 			recipe.AddIngredient(ItemID.HallowedBar, 2);
+            recipe.AddIngredient(null, "OysterPearl", 5);
 			recipe.AddIngredient(ItemID.CrystalShard, 10);
 			recipe.AddTile(TileID.MythrilAnvil);
 			recipe.SetResult(this);
