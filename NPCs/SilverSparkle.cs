@@ -23,7 +23,8 @@ namespace Wildlife.NPCs
             npc.defense = 0;
             npc.lifeMax = 5;
 			Main.npcCatchable[npc.type] = true;
-            npc.catchItem = (short)73;
+    //      npc.catchItem = (short)73;
+            npc.catchItem = (short)mod.ItemType("FlyingCoin");
             npc.HitSound = SoundID.NPCHit1;
             npc.DeathSound = SoundID.NPCDeath1;
             npc.value = 0f;
