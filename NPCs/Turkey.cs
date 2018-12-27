@@ -41,7 +41,7 @@ namespace Wildlife.NPCs
 			{
 				return 0.0f;
 			}
-            return spawnInfo.spawnTileY < Main.rockLayer && !spawnInfo.invasion && !spawnInfo.sky && !Main.eclipse && !spawnInfo.player.ZoneDesert && !spawnInfo.player.ZoneJungle ? 0.02f : 0f;
+            return spawnInfo.player.ZoneOverworldHeight && !spawnInfo.invasion && !spawnInfo.sky && !Main.eclipse && !spawnInfo.player.ZoneDesert && !spawnInfo.player.ZoneJungle ? 0.02f : 0f;
         }
 		
         public override void FindFrame(int frameHeight)

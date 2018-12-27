@@ -46,7 +46,7 @@ namespace Wildlife.NPCs
 			{
 				return 0.0f;
 			}
-            return spawnInfo.spawnTileY < Main.rockLayer && !spawnInfo.invasion && !spawnInfo.sky && !Main.eclipse && spawnInfo.player.ZoneSnow ? 0.08f : 0f;
+            return spawnInfo.player.ZoneOverworldHeight && !spawnInfo.invasion && !spawnInfo.sky && !Main.eclipse && spawnInfo.player.ZoneSnow ? 0.08f : 0f;
 		}
 		public override void HitEffect(int hitDirection, double damage)
         {
