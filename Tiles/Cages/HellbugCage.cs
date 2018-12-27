@@ -7,7 +7,7 @@ using Terraria.ObjectData;
 
 namespace Wildlife.Tiles.Cages
 {
-	internal class DragonflyCage : ModTile
+	internal class HellbugCage : ModTile
 	{
 		public override void SetDefaults() {
 			Main.tileLighted[Type] = true;
@@ -17,8 +17,8 @@ namespace Wildlife.Tiles.Cages
 			TileObjectData.newTile.CopyFrom(TileObjectData.Style1x2Top);
 			TileObjectData.addTile(Type);
 			ModTranslation name = CreateMapEntryName();
-			name.SetDefault("Dragonfly in a bottle");
-			AddMapEntry(new Color(0, 100, 35), name);
+			name.SetDefault("Infernal Mosquito in a bottle");
+			AddMapEntry(new Color(100, 0, 15), name);
 
 			//Can't use this since texture is vertical.
 			//animationFrameHeight = 56;
@@ -28,9 +28,9 @@ namespace Wildlife.Tiles.Cages
 		private readonly int animationFrameWidth = 18;
 
 		public override void ModifyLight(int i, int j, ref float r, ref float g, ref float b) {
-			r = 0f;
-			g = 1f;
-			b = 0.3f;
+			r = 1f;
+			g = 0f;
+			b = 0.1f;
 		}
 
 		public override void SetSpriteEffects(int i, int j, ref SpriteEffects spriteEffects) {
@@ -60,19 +60,19 @@ namespace Wildlife.Tiles.Cages
 		}
 
 		public override void KillMultiTile(int i, int j, int frameX, int frameY) {
-			Item.NewItem(i * 16, j * 16, 16, 32, mod.ItemType<DragonflyCageItem>());
+			Item.NewItem(i * 16, j * 16, 16, 32, mod.ItemType<HellbugCageItem>());
 		}
 	}
 
-	internal class DragonflyCageItem : ModItem
+	internal class HellbugCageItem : ModItem
 	{
 		public override void SetStaticDefaults() {
-			DisplayName.SetDefault("Dragonfly in a Bottle");
+			DisplayName.SetDefault("Infernal Mosquito in a Bottle");
 		}
 
 		public override void SetDefaults() {
 			item.CloneDefaults(ItemID.FireflyinaBottle);
-			item.createTile = mod.TileType<DragonflyCage>();
+			item.createTile = mod.TileType<HellbugCage>();
 		}
 	}
 }

@@ -44,6 +44,7 @@ namespace Wildlife.NPCs
 			int y = spawnInfo.spawnTileY;
 			int tile = (int)Main.tile[x, y].type;
             return (tile == 192) && !spawnInfo.invasion && !spawnInfo.sky && !Main.eclipse ? 0.5f : 0f;
+            return (tile == 191) && !spawnInfo.invasion && !spawnInfo.sky && !Main.eclipse ? 0.5f : 0f;
 		}
 		public override void HitEffect(int hitDirection, double damage)
         {
