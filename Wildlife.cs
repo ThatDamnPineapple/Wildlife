@@ -100,10 +100,11 @@ namespace Wildlife
 	    
 			ModRecipe recipe11 = new ModRecipe(this); //Inferno
 			recipe11.AddIngredient(ItemID.BottledWater, 1);
-			recipe11.AddIngredient(502, 8);
-			recipe11.AddIngredient(174, 3);
-            recipe11.AddIngredient(null, "MagmaCorn", 1);
 			recipe11.AddIngredient(317, 1);
+            recipe11.AddIngredient(null, "HellRat", 1);
+            recipe11.AddIngredient(null, "Phoenix", 1);
+            recipe11.AddIngredient(null, "MagmaCorn", 4);
+			recipe11.AddIngredient(174, 8);
             recipe11.AddTile(TileID.Bottles);
             recipe11.SetResult(2348);
             recipe11.AddRecipe();			

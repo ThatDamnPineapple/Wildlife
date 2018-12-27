@@ -17,13 +17,13 @@ namespace Wildlife.NPCs
         public override void SetDefaults()
         {
             npc.width = 48;
-            npc.height = 34;
+            npc.height = 36;
 			npc.chaseable = false;
             npc.damage = 0;
             npc.defense = 0;
             npc.lifeMax = 5;
 			Main.npcCatchable[npc.type] = true;
-            npc.catchItem = (short)mod.ItemType("Firebug");
+            npc.catchItem = (short)mod.ItemType("HellRat");
             npc.HitSound = SoundID.NPCHit9;
             npc.DeathSound = SoundID.NPCDeath4;
             npc.value = 0f;
