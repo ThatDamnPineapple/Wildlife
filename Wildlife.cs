@@ -16,6 +16,10 @@ namespace Wildlife
 		}
 		 public override void AddRecipes()
         {
+			//-------------------------------------------------------------------------------------------------------
+			//Potions
+			//-------------------------------------------------------------------------------------------------------			
+			
             ModRecipe recipe = new ModRecipe(this); //Wormhole
 			recipe.AddIngredient(ItemID.BottledWater, 1);
             recipe.AddIngredient(null, "FluxCoral", 1);
@@ -141,6 +145,28 @@ namespace Wildlife
             recipe15.AddTile(TileID.Bottles);
             recipe15.SetResult(1339);
             recipe15.AddRecipe();
+			
+			//-------------------------------------------------------------------------------------------------------
+			//Cages
+			//-------------------------------------------------------------------------------------------------------
+			
+            ModRecipe cage1 = new ModRecipe(this); //Cage (dragonfly)
+			cage1.AddIngredient(ItemID.Bottle, 1);
+            cage1.AddIngredient(null, "Dragonfly", 1);
+            cage1.SetResult(null, "DragonflyCageItem", 1);
+            cage1.AddRecipe();
+			
+			ModRecipe cage2 = new ModRecipe(this); //Cage (infernal mosquito)
+			cage2.AddIngredient(ItemID.Bottle, 1);
+            cage2.AddIngredient(null, "Firebug", 1);
+            cage2.SetResult(null, "HellbugCageItem", 1);
+            cage2.AddRecipe();
+			
+			ModRecipe cage3 = new ModRecipe(this); //Cage (supercharged orb)
+			cage3.AddIngredient(ItemID.Bottle, 1);
+            cage3.AddIngredient(null, "GraniteOrb", 1);
+            cage3.SetResult(null, "OrbCageItem", 1);
+            cage3.AddRecipe();
         }
 	}
 }

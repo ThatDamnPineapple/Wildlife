@@ -4,6 +4,24 @@ The theme of content varies massively, from bamboo on the outskirts of your worl
 Forum post is severely outdated, refer to the discord linked to it if you have questions.
 
 Latest Update:
+-made the bug bottles from last update craftable
+-added a bottle for supercharged orbs
+-changed flying coin hit/kill sounds
+-fixed strawberry plant scale
+
+-Hellscale Rat- Is it a rat? Is it a lizard? Whatever it is, its creepy and likes to crawl around in lava, spawns in hell
+-Jadefish- This small fish spawns in caves, after catching it, you can use its stomach to get some coins and cave-going plants
+-Dragonfly and infernal mosquito can now be bottled like fireflies
+-The flying coin now drops itself when netted, its item sells for 5 gold, rather than the 1 it used to drop
+Phoenixes no longer follow the player, phoenix sell prices changed accordingly, scorching phoenix item name was wrongly 'Phoenix', fixed
+Added oyster pearls to heavenly crystal recipe, lowered amount of bullets crafted with one pearl
+Given gilded crawler normal hit sounds as the old ones were too dramatic for a bug
+Fixed yellow fairy potion icon size and yellow fairy bottle tooltip
+Resprited the strawberry plant
+Made the inferno potion alt recipe harder to get
+Animals no longer spawn in the dirt layer/underground, owls are now properly restricted (no hell owls)
+Living Mites now spawn from both wood and leaf blocks
+
 Stoneberries- grow near water on stone, they increase health but lower damage, these will be reconsidered/revamped quite shortly, give some ideas on the discord server
 Overgrown Living Wood Mite- Spawns in living mahoganys, used for bait
 Scorching Phoenix- Like the frost phoenix, but spawns in hell

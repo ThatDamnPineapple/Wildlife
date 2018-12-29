@@ -25,13 +25,13 @@ namespace Wildlife.NPCs
 			Main.npcCatchable[npc.type] = true;
     //      npc.catchItem = (short)73;
             npc.catchItem = (short)mod.ItemType("FlyingCoin");
-            npc.HitSound = SoundID.NPCHit1;
-            npc.DeathSound = SoundID.NPCDeath1;
+            npc.HitSound = SoundID.NPCHit4;
+            npc.DeathSound = SoundID.NPCHit4;
             npc.value = 0f;
 			npc.aiStyle = 64;
 			//npc.alpha = 255;
-				aiType = 358;
-				npc.noGravity = true;
+			aiType = 358;
+			npc.noGravity = true;
             npc.knockBackResist = .25f;
   
         }
