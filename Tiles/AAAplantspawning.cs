@@ -10,7 +10,7 @@ namespace Wildlife.Tiles
 {
 	internal sealed class WGlobalTile : GlobalTile
 	{
-		int[] TileArray2 = {0, 3, 185, 186, 187, 71, 28};
+		int[] TileArray2 = {0, 185, 186, 187, 71, 28};
 		public override void RandomUpdate(int i, int j, int type)
         {
 			if (type == 367)
