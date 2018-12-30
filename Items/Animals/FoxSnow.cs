@@ -30,12 +30,8 @@ namespace Wildlife.Items.Animals
 			item.consumable = true;
 			item.noUseGraphic = true;
 			item.value = 500;
+			item.makeNPC = (short)mod.NPCType<FoxSnow>();
 		}
-		  public override bool UseItem(Player player)
-        {
-            NPC.NewNPC((int)player.Center.X, (int)player.Center.Y, mod.NPCType("FoxSnow"));
-            return true;
-        }
         
 	}
 }

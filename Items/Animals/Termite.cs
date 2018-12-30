@@ -31,12 +31,8 @@ namespace Wildlife.Items.Animals
 			item.noUseGraphic = true;
 			item.consumable = true;
 			item.value = 800;
+			item.makeNPC = (short)mod.NPCType<Termite>();
 		}
-		  public override bool UseItem(Player player)
-        {
-            NPC.NewNPC((int)player.Center.X, (int)player.Center.Y, mod.NPCType("Termite"));
-            return true;
-        }
         
 	}
 }

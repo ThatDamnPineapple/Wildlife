@@ -31,12 +31,7 @@ namespace Wildlife.Items.Animals
 			item.noUseGraphic = true;
 			item.consumable = true;
 			item.value = 400;
-		}
-		  public override bool UseItem(Player player)
-        {
-            NPC.NewNPC((int)player.Center.X, (int)player.Center.Y, mod.NPCType("Dragonfly"));
-            return true;
-        }
-        
+			item.makeNPC = (short)mod.NPCType<Dragonfly>();
+        }  
 	}
 }

@@ -32,12 +32,7 @@ namespace Wildlife.Items.Animals
 			item.noUseGraphic = true;
 			item.consumable = true;
 			item.value = 1000;
+			item.makeNPC = (short)mod.NPCType<Firebug>();
 		}
-		  public override bool UseItem(Player player)
-        {
-            NPC.NewNPC((int)player.Center.X, (int)player.Center.Y, mod.NPCType("Firebug"));
-            return true;
-        }
-        
 	}
 }

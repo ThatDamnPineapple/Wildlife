@@ -30,12 +30,8 @@ namespace Wildlife.Items.Animals
 			item.consumable = true;
 			item.value = 500;
 			item.noUseGraphic = true;
+			item.makeNPC = (short)mod.NPCType<Turkey>();
 		}
-		  public override bool UseItem(Player player)
-        {
-            NPC.NewNPC((int)player.Center.X, (int)player.Center.Y, mod.NPCType("Turkey"));
-            return true;
-        }
         
 	}
 }

@@ -36,11 +36,7 @@ namespace Wildlife.Items.Animals
 			item.noUseGraphic = true;
 			item.consumable = true;
 			item.value = 4000;
-		}
-		  public override bool UseItem(Player player)
-        {
-            NPC.NewNPC((int)player.Center.X, (int)player.Center.Y, mod.NPCType("YellowFairy"));
-            return true;
+			item.makeNPC = (short)mod.NPCType<YellowFairy>();
         }
 		public override void PostDrawInWorld(SpriteBatch spriteBatch, Color lightColor, Color alphaColor, float rotation, float  scale, int whoAmI) 	
 		{
