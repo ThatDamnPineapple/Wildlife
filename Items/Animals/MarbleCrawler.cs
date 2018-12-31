@@ -31,7 +31,7 @@ namespace Wildlife.Items.Animals
 			item.noUseGraphic = true;
 			item.consumable = true;
 			item.value = 500;
-			item.makeNPC = (short)mod.NPCType<MarbleCrawler>();
+			item.makeNPC = (short)mod.NPCType<NPCs.MarbleCrawler>();
 		}
         
 	}

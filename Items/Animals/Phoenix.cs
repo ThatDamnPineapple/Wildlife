@@ -36,7 +36,7 @@ namespace Wildlife.Items.Animals
 			item.noUseGraphic = true;
 			item.consumable = true;
 			item.value = 100000;
-			item.makeNPC = (short)mod.NPCType<Phoenix>();
+			item.makeNPC = (short)mod.NPCType<NPCs.Phoenix>();
 		}
 		public override void PostDrawInWorld(SpriteBatch spriteBatch, Color lightColor, Color alphaColor, float rotation, float  scale, int whoAmI) 	
 		{

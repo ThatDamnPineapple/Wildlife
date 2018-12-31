@@ -36,7 +36,7 @@ namespace Wildlife.Items.Animals
 			item.noUseGraphic = true;
 			item.consumable = true;
 			item.value = 500000;
-			item.makeNPC = (short)mod.NPCType<SilverSparkle>();
+			item.makeNPC = (short)mod.NPCType<NPCs.SilverSparkle>();
 		}
 	}
 }

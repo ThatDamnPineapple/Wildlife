@@ -38,7 +38,7 @@ namespace Wildlife.Items.Animals
 			item.noUseGraphic = true;
 			item.consumable = true;
 			item.value = 1500;
-			item.makeNPC = (short)mod.NPCType<GraniteOrb>();
+			item.makeNPC = (short)mod.NPCType<NPCs.GraniteOrb>();
 		}
  		public override void PostDrawInWorld(SpriteBatch spriteBatch, Color lightColor, Color alphaColor, float rotation, float  scale, int whoAmI) 	
 		{

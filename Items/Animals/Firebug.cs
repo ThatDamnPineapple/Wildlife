@@ -32,7 +32,7 @@ namespace Wildlife.Items.Animals
 			item.noUseGraphic = true;
 			item.consumable = true;
 			item.value = 1000;
-			item.makeNPC = (short)mod.NPCType<Firebug>();
+			item.makeNPC = (short)mod.NPCType<NPCs.Firebug>();
 		}
 	}
 }

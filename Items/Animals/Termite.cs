@@ -31,7 +31,7 @@ namespace Wildlife.Items.Animals
 			item.noUseGraphic = true;
 			item.consumable = true;
 			item.value = 800;
-			item.makeNPC = (short)mod.NPCType<Termite>();
+			item.makeNPC = (short)mod.NPCType<NPCs.Termite>();
 		}
         
 	}

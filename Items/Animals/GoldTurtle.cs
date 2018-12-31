@@ -30,7 +30,7 @@ namespace Wildlife.Items.Animals
 			item.useStyle = 1;
 			item.consumable = true;
 			item.noUseGraphic = true;
-			item.makeNPC = (short)mod.NPCType<GoldTurtle>();
+			item.makeNPC = (short)mod.NPCType<NPCs.GoldTurtle>();
 		}
         
 	}

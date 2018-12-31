@@ -30,7 +30,7 @@ namespace Wildlife.Items.Animals
 			item.consumable = true;
 			item.value = 500;
 			item.noUseGraphic = true;
-			item.makeNPC = (short)mod.NPCType<Monkey>();
+			item.makeNPC = (short)mod.NPCType<NPCs.Monkey>();
 		}
         
 	}

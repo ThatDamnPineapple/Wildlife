@@ -31,7 +31,7 @@ namespace Wildlife.Items.Animals
 			item.noUseGraphic = true;
 			item.consumable = true;
 			item.value = 400;
-			item.makeNPC = (short)mod.NPCType<Dragonfly>();
+			item.makeNPC = (short)mod.NPCType<NPCs.Dragonfly>();
         }  
 	}
 }
