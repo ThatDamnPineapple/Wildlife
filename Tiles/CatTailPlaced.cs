@@ -28,22 +28,7 @@ namespace Wildlife.Tiles
             };
 
             TileObjectData.addTile(Type);
-			animationFrameHeight = 36;
-        }	
-	    private readonly int animationFrameWidth = 36;
-		
-		public override void RandomUpdate(int i, int j) {		
-			if (Main.tile[i, j].frameX == 0) {
-
-				Main.tile[i, j].frameX += 36;
-
-			}
-
-			else if (Main.tile[i, j].frameX == 36) {
-
-				Main.tile[i, j].frameX += 36;
-			}
-		}		
+        }		
         public override void NumDust(int i, int j, bool fail, ref int num)
         {
             num = fail ? 1 : 3;
@@ -51,17 +36,11 @@ namespace Wildlife.Tiles
         public override void KillMultiTile(int i, int j, int frameX, int frameY)
         {
             Main.PlaySound(6, i * 16, j * 16);	            
-			int stage = Main.tile[i, j].frameX / 18;
-			if (stage == 3) {
-			{
             Item.NewItem(i * 16, j * 16, 48, 48, mod.ItemType("CatTail"));
-			}      
             if (Main.rand.Next(50) == 0)
 			{
             Main.PlaySound(31, i * 16, j * 16);	 
-			}          
+			}                  
         }
-       
-		}
     }
 }
