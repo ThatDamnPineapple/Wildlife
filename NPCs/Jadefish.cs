@@ -31,7 +31,7 @@ namespace Wildlife.NPCs
 			animationType = NPCID.Goldfish;
 			aiType = NPCID.Goldfish;  
             npc.knockBackResist = .25f;
-  
+  			npc.friendly = true;
         }
  public override bool PreAI()
         {

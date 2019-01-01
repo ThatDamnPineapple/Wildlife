@@ -32,7 +32,7 @@ namespace Wildlife.NPCs
 			npc.noGravity = true;
             npc.knockBackResist = .50f;
 			 npc.lavaImmune = true;
-  
+			npc.friendly = true;  
         }
 
 		 public override float SpawnChance(NPCSpawnInfo spawnInfo)

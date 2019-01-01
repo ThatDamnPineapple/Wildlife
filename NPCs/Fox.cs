@@ -38,6 +38,7 @@ namespace Wildlife.NPCs
 			npc.aiStyle = 7;
 			aiType = NPCID.Bunny;  
 			animationType = NPCID.Zombie;
+			npc.friendly = true;
         }
 
 				public override float SpawnChance(NPCSpawnInfo spawnInfo)

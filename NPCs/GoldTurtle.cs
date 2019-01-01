@@ -32,7 +32,7 @@ namespace Wildlife.NPCs
             npc.DeathSound = SoundID.NPCDeath1;
             npc.value = 0f;
             npc.knockBackResist = .25f;
-  
+ 			npc.friendly = true; 
         }
 
 				public override float SpawnChance(NPCSpawnInfo spawnInfo)

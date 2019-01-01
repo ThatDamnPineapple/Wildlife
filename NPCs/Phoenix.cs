@@ -34,7 +34,7 @@ namespace Wildlife.NPCs
             npc.knockBackResist = .25f;
 			//banner = npc.type;
 			//bannerItem = mod.ItemType("SnakeBanner");
-  
+  			npc.friendly = true;
         }
 
 		public override float SpawnChance(NPCSpawnInfo spawnInfo)

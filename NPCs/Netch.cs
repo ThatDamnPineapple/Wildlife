@@ -31,7 +31,7 @@ namespace Wildlife.NPCs
 			npc.noGravity = true;
 			npc.noTileCollide = true;
             npc.knockBackResist = 0.25f;
-  
+			npc.friendly = true;  
         }
 
 		public override float SpawnChance(NPCSpawnInfo spawnInfo)

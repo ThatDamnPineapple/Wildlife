@@ -35,7 +35,7 @@ namespace Wildlife.NPCs
             npc.knockBackResist = .25f;
 			banner = npc.type;
 			bannerItem = mod.ItemType("DeerBanner");
-  
+			npc.friendly = true;  
         }
 
 				public override float SpawnChance(NPCSpawnInfo spawnInfo)
