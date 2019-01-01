@@ -34,8 +34,17 @@ namespace Wildlife.NPCs
 			 npc.lavaImmune = true;
 			npc.friendly = true;  
         }
+		public override bool? CanBeHitByItem(Player player, Item item) {
 
-		 public override float SpawnChance(NPCSpawnInfo spawnInfo)
+			return true;
+
+		}
+		public override bool? CanBeHitByProjectile(Projectile projectile) {
+
+			return true;
+
+		}
+		public override float SpawnChance(NPCSpawnInfo spawnInfo)
         {
             return spawnInfo.player.ZoneUnderworldHeight ? 0.05f : 0f;
         }

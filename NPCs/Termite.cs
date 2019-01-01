@@ -38,7 +38,16 @@ namespace Wildlife.NPCs
 			animationType = NPCID.Zombie;
 			npc.friendly = true;
         }
+		public override bool? CanBeHitByItem(Player player, Item item) {
 
+			return true;
+
+		}
+		public override bool? CanBeHitByProjectile(Projectile projectile) {
+
+			return true;
+
+		}
     	public override float SpawnChance(NPCSpawnInfo spawnInfo)
 		{
 			int x = spawnInfo.spawnTileX;

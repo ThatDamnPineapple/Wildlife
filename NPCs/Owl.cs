@@ -36,7 +36,16 @@ namespace Wildlife.NPCs
 			//bannerItem = mod.ItemType("SnakeBanner");
   			npc.friendly = true;
         }
+		public override bool? CanBeHitByItem(Player player, Item item) {
 
+			return true;
+
+		}
+		public override bool? CanBeHitByProjectile(Projectile projectile) {
+
+			return true;
+
+		}
 		public override float SpawnChance(NPCSpawnInfo spawnInfo)
         {
 			if (SpawnCondition.Cavern.Chance != 0)

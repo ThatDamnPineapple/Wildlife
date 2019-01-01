@@ -42,5 +42,12 @@ namespace Wildlife.Tiles
             Main.PlaySound(31, i * 16, j * 16);	 
 			}                  
         }
+
+		public override void RandomUpdate(int i, int j) {
+
+			if (WorldGen.genRand.Next(20) == 0) {
+
+			}
+		}
     }
 }

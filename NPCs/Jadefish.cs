@@ -33,7 +33,17 @@ namespace Wildlife.NPCs
             npc.knockBackResist = .25f;
   			npc.friendly = true;
         }
- public override bool PreAI()
+		public override bool? CanBeHitByItem(Player player, Item item) {
+
+			return true;
+
+		}
+		public override bool? CanBeHitByProjectile(Projectile projectile) {
+
+			return true;
+
+		}
+        public override bool PreAI()
         {
 			
 			if(Main.rand.Next(10) == 5) {

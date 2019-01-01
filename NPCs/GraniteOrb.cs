@@ -40,14 +40,23 @@ namespace Wildlife.NPCs
             npc.knockBackResist = .25f;
  			npc.friendly = true; 
         }
+		public override bool? CanBeHitByItem(Player player, Item item) {
+
+			return true;
+
+		}
+		public override bool? CanBeHitByProjectile(Projectile projectile) {
+
+			return true;
+
+		}
     	public override float SpawnChance(NPCSpawnInfo spawnInfo)
 		{
 			int x = spawnInfo.spawnTileX;
 			int y = spawnInfo.spawnTileY;
 			int tile = (int)Main.tile[x, y].type;
             return (tile == 368) && !spawnInfo.invasion && !spawnInfo.sky && !Main.eclipse ? 0.05f : 0f;
-        }
-		
+        }		
         public override void AI()
 		{
 			Vector3 RGB = new Vector3(0f, 1.5f, 2.5f);

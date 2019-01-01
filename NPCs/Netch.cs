@@ -33,7 +33,16 @@ namespace Wildlife.NPCs
             npc.knockBackResist = 0.25f;
 			npc.friendly = true;  
         }
+		public override bool? CanBeHitByItem(Player player, Item item) {
 
+			return true;
+
+		}
+		public override bool? CanBeHitByProjectile(Projectile projectile) {
+
+			return true;
+
+		}
 		public override float SpawnChance(NPCSpawnInfo spawnInfo)
         {
             return !spawnInfo.invasion && spawnInfo.sky && !Main.eclipse && Main.dayTime ? 0.1f : 0f;

@@ -36,7 +36,16 @@ namespace Wildlife.NPCs
 			//bannerItem = mod.ItemType("SnakeBanner");
   
         }
+		public override bool? CanBeHitByItem(Player player, Item item) {
 
+			return true;
+
+		}
+		public override bool? CanBeHitByProjectile(Projectile projectile) {
+
+			return true;
+
+		}
 		public override float SpawnChance(NPCSpawnInfo spawnInfo)
         {
             return !spawnInfo.invasion && !spawnInfo.sky && !Main.eclipse && spawnInfo.player.ZoneSnow ? 0.05f : 0f;
